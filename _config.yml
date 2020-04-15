@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Di Guan"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Di Guan"
+description              : "Basics to Deep Learning."
+url                      : https://guandi1995.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Di Guan"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Graduate Student in UCSD"
+  location         : "San Diego, CA"
+  email            : "d1guan@eng.ucsd.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -279,3 +279,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+#Pages
+- scope:
+    path: ""
+    type: pages
+  values:
+    layout: single
+    author_profile: true
