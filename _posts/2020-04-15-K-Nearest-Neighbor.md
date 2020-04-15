@@ -2,11 +2,13 @@
 title: "K-Nearest-Neighbor (KNN) Classification"
 date: 2020-04-15
 tags: [machine learning, data science, K-Nearest-Neighbor]
-header:
-  image: "/images/knn/knn_header_image.png"
+#header:
+  #image: "/images/knn/knn_header_image.png"
+
 excerpt: "Machine Learning, Data Science, K-Nearest-Neighbor"
 ---
 
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/filename.jpg" alt="">
 #### Nearest Neighbor Classifier
 
 K nearest neighbor classifier is rarely used in practice. But it allow us to get an idea about the basic approach to an classification problem.
