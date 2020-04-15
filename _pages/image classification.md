@@ -1,11 +1,11 @@
----
+<!-- ---
 title: "Deep Learning Posts"
 permalink: /deep-learning/
 layout: archive
 author_profile: true
 header:
     image: "/_pics/_index/shanghai.jpg"
----
+--- -->
 
 {% include group-by-array collection=site.posts field="tags" %}
 
