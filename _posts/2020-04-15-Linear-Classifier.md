@@ -8,7 +8,7 @@ mathjax: "true"
 ---
 <img src="{{ site.url }}{{ site.baseurl }}/images/linear_classifier/header_image.png" alt="">
 
-#### Introduction to linear classifier
+### Introduction to Linear Cassifier
 
 In last post, we approached to the problem of image classification by using kNN classifier, aiming to assign labels to testing images by comparing the distance to each training image. However, it has a number of disadvantages in real life implementation:
 
@@ -29,7 +29,7 @@ This approach has two major components: **score function** and **loss function**
 
 
 
-#### Linear score function
+### Linear Score Function
 
 For score function in CIFAR-10, we define it as $$R^{n}\rightarrow R^{k}$$ where $$n=3072$$ and $$k=10$$. Our linear classifier would be:
 $$
@@ -44,9 +44,9 @@ Notes:
 
 
 
-#### Interpreting a linear classifier
+### Interpreting Linear Classifier
 
-To simplify the problems, for instance, we have 3 classes: cat, car, frog.  By using the linear classifier function described above, assume our parameters: weights matrix $$W$$ and bias vector $$b$$ as below:
+To simplify the problem, for instance, we have 3 classes: cat, car, frog.  By using the linear classifier function described above, assume our parameters: weights matrix $$W$$ and bias vector $$b$$ as below:
 
 $$
 f(x_i;W,b)=Wx_i+b\\
@@ -68,8 +68,10 @@ As training images, $$x_1,x_2,x_3$$ are belonged to the class of cat, car and fr
 
 To interpret the linear classifier, we can treat **each row of $$W$$ corresponds to a template** and each entry of the row in $$W$$ is the weights for the corresponding pixels of the input training image $$x_i$$. For instance, the first entry of the first row in $$W$$ is the weight for the first pixel of the input image, $$x_i$$.
 
-Another way to think of it is that you are doing template matching. You only use a single image per class instead of having thousands of training images, and use the inner product as the metrics instead of L1 or L2 distance metrics in kNN.
+Another way to think of it is that we are doing template matching. We only use a single image per class instead of having thousands of training images, and use the inner product as the metrics instead of L1 or L2 distance metrics in kNN.
 
-In the table above, take the first training image, $$x_1$$ as our example, the score vector for $$x_1$$ is $$[3.2,5.1,-1,7]^T$$. Since the ground truth label for $$x_1$$ is cat, intuitively, the score for class cat is supposed to be much higher than the other two classes. However, for $$x_1$$, the highest score is the class of car, 5.1 while the score for the class of cat is 3.2, which means that we did not obtain a good prediction or measure for $$x_1$$. We observe this issue by simply visualizing the score numbers, but we need a method to let our algorithm know whether the scores are reasonable and qualify whether the score is good or bad. This leads us to our next topic, loss function, the topics that play a significant impact on deep learning.
+In the table above, take the first training image, $$x_1$$ as our example, the score vector for $$x_1$$ is $$[3.2,5.1,-1,7]^T$$. Since the ground truth label for $$x_1$$ is cat, intuitively, the score for class cat is supposed to be much higher than the other two classes. However, for $$x_1$$, the highest score is the class of car, 5.1 while the score for the class of cat is 3.2, which means that we did not obtain a good prediction or measurement for $$x_1$$.
 
-Next post, I will address the topic of loss function in more detail. 
+As human beings, We conclude the above observation by simply visualizing the score numbers, but we need an approach to let our algorithm decide whether the scores are reasonable and qualify whether the score is good or bad. This leads us to the next topic, loss function, the topic that plays a significant impact on deep learning.
+
+Next post, I will address the topic of loss function in more detail.
