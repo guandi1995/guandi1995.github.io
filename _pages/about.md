@@ -2,7 +2,7 @@
 title: "About"
 permalink: /about/
 header:
-  image: "/images/shanghai_1.jpg"
+  image: "/images/shanghai.jpg"
 ---
 
 I received my Bachelor Degree of Purdue University majoring in Industrial Engineering
