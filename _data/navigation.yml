@@ -1,8 +1,8 @@
 # main links
 main:
   - title: "About"
-    url: /about/
-  # - title: "Deep Learning"
+    #url: /about/
+  - title: "Deep Learning"
   #   url: /deep-learning/
   # - title: "Sample Posts"
   #   url: /year-archive/
