@@ -5,7 +5,7 @@ This is Di Guan. I received a Bachelor Degree from Purdue University majoring in
 The field of deep learning is changing tremondously everyday and many people start to step into this area, but before we dive into this field, we necesssaily need to build a solid basic of knowing how those concepts are implemented into our real world applications. Therefore, the purpose of this website is to give you elementary knowledge from my understanding viewpoints of deep learning so that we could apply them as the tool to cope with real world applications.
 
 
-You can use the [editor on GitHub](https://github.com/guandi1995/guandi1995.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can use the [editor on GitHub](https://github.com/guandi1995/guandi1995.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files. [image classification](https://github.com/guandi1995/guandi1995.github.io/Lecture%202.html)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
