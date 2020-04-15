@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Di Guan"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /images/visa.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduate Student in UC San Diego"
   location         : "San Diego, CA"
   email            :
@@ -279,3 +279,10 @@ defaults:
       comments: # true
       share: true
       related: true
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
