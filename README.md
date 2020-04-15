@@ -1,4 +1,9 @@
-## Welcome to The Wolrd of Deep Learning
+## About Me
+
+This is Di Guan. I received a Bachelor Degree from Purdue University majoring in Industrial Engineering in 2018 and currenly a graduate student in UC San Diego, majoring in Machine Learning and Data Science in the Department of Electrical and Computer Engineering. I have a strong passion in the fields of machine learning and deep learning. Because of that, I created this website and shared some my personal viewpoints of deep learning and the basic topics that someone is supposed to have a good knowledge of when it comes to deep learning. 
+
+The field of deep learning is changing tremondously everyday and many people start to step into this area, but before we dive into this field, we necesssaily need to build a solid basic of knowing how those concepts are implemented into our real world applications. Therefore, the purpose of this website is to give you elementary knowledge from my understanding viewpoints of deep learning so that we could apply them as the tool to cope with real world applications.
+
 
 You can use the [editor on GitHub](https://github.com/guandi1995/guandi1995.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
