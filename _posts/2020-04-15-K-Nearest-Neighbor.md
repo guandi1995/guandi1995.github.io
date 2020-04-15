@@ -3,7 +3,7 @@ title: "K-Nearest-Neighbor (KNN) Classification"
 date: 2020-04-15
 tags: [machine learning, data science, K-Nearest-Neighbor]
 header:
-  image: "/images/shanghai.jpg"
+  image: "/images/shanghai_1.jpg"
 excerpt: "Machine Learning, Data Science, K-Nearest-Neighbor"
 ---
 
