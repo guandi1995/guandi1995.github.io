@@ -6,7 +6,7 @@ tags: [machine learning, data science, loss function]
 excerpt: "Machine Learning, Data Science, Loss Function"
 mathjax: "true"
 ---
-<img src="{{ site.url }}{{ site.baseurl }}/images/loss_function/header_image.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/loss_function/header_image.jpg" alt="">
 
 Neural Networks learns to map a set of inputs to a set of outputs from training data. Given the training data, we usually calculate the weights for a neural network, but it is impossible to obtain the perfect weights. The approach to solve this is by transforming the problem to optimization algorithm, an algorithm that is used to navigate the space of possible sets of weights the model may use in order to make good predictions.
 
