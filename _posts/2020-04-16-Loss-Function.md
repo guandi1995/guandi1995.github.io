@@ -12,7 +12,7 @@ Neural Networks learns to map a set of inputs to a set of outputs from training 
 
 But in the context of an optimization algorithm, the function used to evaluate a candidate solution is referred to as the objective function. Objective function is the function we want to minimize or maximize. In the context of machine learning or deep learning, we always want to minimize the function. That is why objective function is considered as cost function or loss function.
 
-**Machine learning and deep learning is to learn by means of a loss function.** In calculating the error of the model during optimization process, a loss function must be chosen. However, choosing loss functions is challenging because it is problem dependent. Therefore, it is important that the chosen loss function faithfully represent our design models based on the properties of the problem.
+**Machine learning and deep learning is to learn by means of a loss function.** With the help of some optimization function, loss functions learns to reduce the error in prediction. In calculating the error of the model during optimization process, a loss function must be chosen. However, choosing loss functions is challenging because it is problem dependent. Therefore, it is important that the chosen loss function faithfully represent our design models based on the properties of the problem.
 
 ### Types of Loss Function
 
@@ -32,5 +32,18 @@ There are many types of loss function and there is no such one-size-fits-all los
   - Softmax Function/Multi-nomial logistic regression
   - Sparse Multi-class Cross Entropy Loss
   - Kullback Leibler Divergence Loss
+
+Take CIFAR-10 as our example, intuitively, we can determine which class a specific image is belonged to by simply visualizing the score for each class, $$f(x_i;W,b)$$. But in order to let computer make decision and justify how good or bad the score is, we need to introduce loss functions for any machine learning problem.
+
+**To justify how good or bad the score gives us to determine the class of the image, it turns out loss function can help us accomplish this by not simply visualizing and comparing the score vectors.**
+
+A loss function tells us how good our current classifier is. Given a dataset of examples, $${(x_i,y_i)},i=1,..,N$$, where $$x_i$$ is vector of all pixel values of a image and $y_i$ is its corresponding label. Generalized loss function typically is a sum of loss over examples no matter what the classification problems are, loss function is generalized defined as following:
+
+  $$
+  L=\dfrac{1}{n}\sum_{i=1}^n L_i[f(x_i;\theta),y_i]
+  $$
+
+The ultimate goal of machine learning is to find the argument $$\theta^*$$ that minimizes the loss function, in this case of linear classifier, the parameter are $$W^*,b^*$$.  **Loss function is also called as cost function or objective function.** **Machine learning and deep learning is actually learning by means of a loss function.**
+
 
 For the example of CIFAR-10, since it is a multi-class classification problem, we will focus on two important loss functions, SVM and Cross Entropy loss, in detail in the next two posts.
