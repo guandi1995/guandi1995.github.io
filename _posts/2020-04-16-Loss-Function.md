@@ -13,7 +13,7 @@ But in the context of an optimization algorithm, the function used to evaluate a
 
 **Machine learning and deep learning is to learn by means of a loss function.** In calculating the error of the model during optimization process, a loss function must be chosen. However, choosing loss functions is challenging because it is problem dependent. Therefore, it is important that the chosen loss function faithfully represent our design models based on the properties of the problem.
 
-###Types of Loss Function
+### Types of Loss Function
 
 There are many types of loss function and there is no such one-size-fits-all loss function to algorithms in machine learning. Typically it is categorized into 3 types.
 
