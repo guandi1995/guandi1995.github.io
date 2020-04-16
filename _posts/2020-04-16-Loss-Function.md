@@ -6,6 +6,7 @@ tags: [machine learning, data science, loss function]
 excerpt: "Machine Learning, Data Science, Loss Function"
 mathjax: "true"
 ---
+<img src="{{ site.url }}{{ site.baseurl }}/images/loss_function/header_image.png" alt="">
 
 Neural Networks learns to map a set of inputs to a set of outputs from training data. Given the training data, we usually calculate the weights for a neural network, but it is impossible to obtain the perfect weights. The approach to solve this is by transforming the problem to optimization algorithm, an algorithm that is used to navigate the space of possible sets of weights the model may use in order to make good predictions.
 
@@ -31,3 +32,5 @@ There are many types of loss function and there is no such one-size-fits-all los
   - Softmax Function/Multi-nomial logistic regression
   - Sparse Multi-class Cross Entropy Loss
   - Kullback Leibler Divergence Loss
+
+For the example of CIFAR-10, since it is a multi-class classification problem, we will focus on two important loss functions, SVM and Cross Entropy loss, in detail in the next two posts.
