@@ -47,10 +47,11 @@ The ultimate goal of machine learning is to find the argument $$\theta^*$$ that 
 
 ### Regularization
 
-Next thing we need address is regularization, the term that always comes along with loss function. **Regularization is a technique that helps you avoid to create a complex and flexible model, which may lead to overfit the train data.** It will be addressed in more detail in the following posts, now, we just need to realize its existence. Because of regularization, our general loss function is defined as following:
-$$
-L=\dfrac{1}{n}\sum_{i=1}^nL_i+\lambda R(W)^2
-$$
-where $$W$$ is weights matrix and $$\lambda>0$$, $$R(W)$$ is the form of regularization.
+Next thing we need address is regularization, the term that always comes along with loss function. **Regularization is a technique that helps us avoid to create a complex and flexible model, which may lead to overfit the train data.** It will be addressed in more detail in the following posts, now, we just need to realize its existence. Because of regularization, our general loss function is defined as following:
+  $$
+  L=\dfrac{1}{n}\sum_{i=1}^nL_i+\lambda R(W)^2
+  $$
+
+where $$W$$ is weights matrix, $$\lambda>0$$ and $$R(W)$$ is the form of regularization.
 
 For the example of CIFAR-10, since it is a multi-class classification problem, we will focus on two important loss functions, SVM and Cross Entropy loss, in detail in the next two posts.
