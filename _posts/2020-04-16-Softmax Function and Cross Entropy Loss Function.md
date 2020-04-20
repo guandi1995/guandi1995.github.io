@@ -91,9 +91,11 @@ The next thing we want to consider is how to correlate the computed probability 
 ##### Interpretation of softmax function and cross-entropy loss function
 
 since the softmax function is defined as follow:
+
   $$
   P(y_i|x_i;W)=\dfrac{e^{f_{y_i}}}{\sum_je^{f_{j}}}
   $$
+
 It can be interpreted as the probability of the correct class $$y_i$$ given the image $$x_i$$, and we want it to be close to 1, meaning we classify this image to its correct class.
 
 
@@ -111,6 +113,7 @@ Here, considered the other probability of incorrect classes, they are all betwee
 ##### Cross-entropy loss function for softmax function
 
 The mapping function $$f:f(x_i;W)=Wx_i$$ stays unchanged, but we now **interpret these scores as the unnormalized log probabilities for each class** and we could replace the hinge loss/SVM loss with a **cross-entropy** loss that has the form:
+
   $$
   \begin{align*}
   L_i&=-log(P(y_i|x_i;W))\\
