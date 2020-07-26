@@ -55,10 +55,10 @@ $$a^{[l-1]}=n_H^{[l-1]}\times n_W^{[l-1]}\times n_c^{[l-1]}=n_H^{[l-1]}\times n_
 
 $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}=f^{[l]}\times f^{[l]} \times c=$$ each filter size
 
-$$a^{[l]}n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output size
+$$a^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output size
 
 where input size $$n_H^{[l-1]},n_W^{[l-1]},n_c^{[l-1]}$$ are known and
 
 $$n_H^{[l]}=\lfloor \dfrac{n_H^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\rfloor$$, $$n_W^{[l]}=\lfloor \dfrac{n_W^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\rfloor$$, $$n_c^{[l]}=n_f$$.
 
-Furthermore, the single activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}$$ and the overall activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}\times m$$ where $$m$$ is the numbers of the samples. The weight size is $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}\times n_c^{[l]}$$ where $$n_c^{[l]}=n_f$$ and bias$$=n_c^{[l]}=n_f=$$ numbers of filters.
+Furthermore, the single activation size is $$a^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}$$ and the overall activation size is $$A^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}\times m$$ where $$m$$ is the numbers of the samples. The weight size is $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}\times n_c^{[l]}$$ where $$n_c^{[l]}=n_f$$ and bias$$=n_c^{[l]}=n_f=$$ numbers of filters.
