@@ -38,31 +38,18 @@ Denote the input image as $$a^{[0]}$$ or $$x$$. Then we could treat two filters 
 Continuing the example above, the summary of notation in one layer of the convolutional neural networks will be addressed below.
 
 
-
 Denote:
 
 $$f^{[l]}=$$ filter size
-
 $$p^{[l]}=$$ padding size
-
 $$s^{[l]}=$$ stride size
-
 $$n_c^{[l-1]}=c=$$ numbers of input channels
-
 $$n_c^{[l]}=n_f=$$ numbers of filters$$=$$ numbers of the output channels
 
 
-
 $$n_H^{[l-1]}\times n_W^{[l-1]}\times n_c^{[l-1]}=n_H^{[l-1]}\times n_W^{[l-1]}\times c=$$ input $$a^{[l-1]}$$ (previous layer) size
-
 $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}=f^{[l]}\times f^{[l]} \times c=$$ each filter size
-
-$$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output (generated layer) size
-
- where input size $$n_H^{[l-1]},n_W^{[l-1]},n_c^{[l-1]}$$ are known and
-
+$$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output (generated layer) size where input size $$n_H^{[l-1]},n_W^{[l-1]},n_c^{[l-1]}$$ are known and
 $$n_H^{[l]}=\lfloor \dfrac{n_H^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\rfloor$$, $$n_W^{[l]}=\lfloor \dfrac{n_W^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\rfloor$$, $$n_c^{[l]}=n_f$$.
 
-
-
-Furthermore, the single activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}$$ and the overall activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}\times m$$ where $$m$$ is the numbers of the samples. The weight size is $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}\times n_c^{[l]}$$ where $$n_c^{[l]}=n_f$$ and bias$$=n_c^{[l]}=n_f=$$ numbers of filters. 
+Furthermore, the single activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}$$ and the overall activation size is $$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}\times m$$ where $$m$$ is the numbers of the samples. The weight size is $$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}\times n_c^{[l]}$$ where $$n_c^{[l]}=n_f$$ and bias$$=n_c^{[l]}=n_f=$$ numbers of filters.
