@@ -48,14 +48,14 @@ $$s^{[l]}=$$ stride size
 
 $$n_c^{[l-1]}=c=$$ numbers of input channels
 
-$$n_c^{[l]}=n_f=$$ numbers of filters$$=$$ numbers of the output channels
+$$n_c^{[l]}=n_f=$$ numbers of filters $$=$$ numbers of the output channels
 
 
-$$n_H^{[l-1]}\times n_W^{[l-1]}\times n_c^{[l-1]}=n_H^{[l-1]}\times n_W^{[l-1]}\times c=$$ input $$a^{[l-1]}$$ (previous layer) size
+$$a^{[l-1]}=n_H^{[l-1]}\times n_W^{[l-1]}\times n_c^{[l-1]}=n_H^{[l-1]}\times n_W^{[l-1]}\times c=$$ input size
 
-$$f^{[l]}\times f^{[l]} \times n_c^{[l-1]}=f^{[l]}\times f^{[l]} \times c=$$ each filter size
+$$a^{[l]}=f^{[l]}\times f^{[l]} \times n_c^{[l-1]}=f^{[l]}\times f^{[l]} \times c=$$ each filter size
 
-$$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output (generated layer) size
+$$n_H^{[l]}\times n_W^{[l]}\times n_c^{[l]}=n_H^{[l]}\times n_W^{[l]}\times n_f=$$ output size
 
 where input size $$n_H^{[l-1]},n_W^{[l-1]},n_c^{[l-1]}$$ are known and
 
