@@ -1,5 +1,5 @@
 ---
-title: "Simple ConvNet Example and Pooling Layers"
+title: "Pooling Layers"
 date: 2020-07-20
 tags: [machine learning, data science, Pooling]
 
