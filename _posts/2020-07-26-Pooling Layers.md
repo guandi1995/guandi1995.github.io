@@ -21,7 +21,7 @@ As shown in the figure above, the input layer $$a^{[0]}$$ is convolved with 10 f
 ### Pooling Layers
 In general, there are three types of layer in a convolutional neural network, which are convolution layer (CONV), pooling layer (POOL) and fully connected layer (FC). Typically, several convolution layers are followed by a pooling layer and a few fully connected layers are at the end of the convolutional network.
 
-The function of pooling layer is to reduce the spatial size of the representation to reduce the amount of parameters and computation in the network and it operates on each feature map (channels) independently. There are two types of pooling layers, which are **max pooling** and **average pooling**. However, max pooling is the one that is commonly used while average pooling is rarely used. The reason why max pooling layers work well in convolutional networks is that it helps the networks detect the features more efficiently after down-sampling an input representation and it helps over-fitting by providing an abstracted form of the representation.
+The function of pooling layer is to reduce the spatial size of the representation so as to reduce the amount of parameters and computation in the network and it operates on each feature map (channels) independently. There are two types of pooling layers, which are **max pooling** and **average pooling**. However, max pooling is the one that is commonly used while average pooling is rarely used. The reason why max pooling layers work so well in convolutional networks is that it helps the networks detect the features more efficiently after down-sampling an input representation and it helps over-fitting by providing an abstracted form of the representation.
 
 ### Max Pooling
 
@@ -35,3 +35,5 @@ The operations of the max pooling is quite simple since there are only two hyper
 
 
 As shown in the figure above, it is important to realize that **there is no parameters needed to learn in max pooling layer** and furthermore it helps the overall network reduce the amount of parameters needed to learn, which save the computation cost of the network because **the max pooling layer reduces $$n_H, n_W$$ but not $$n_c$$**.
+
+In summary, since there are only two hyperparameters in pooling layers, filter size $$f$$ and stride $$s$$, the size of the pooling layer input is $$n_H\times n_W \times n_c$$ while the size of the pooling layer output is $$\lfloor \dfrac{n_H-f}{s}+1\rfloor \times \lfloor \dfrac{n_W-f}{s}+1\rfloor \times n_c$$. 
