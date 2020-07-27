@@ -1,6 +1,6 @@
 ---
 title: "One Layer of a Convolutional Neural Networks"
-date: 2020-07-20
+date: 2020-07-25
 tags: [machine learning, data science, convolutional neural network]
 
 excerpt: "Deep Learning"

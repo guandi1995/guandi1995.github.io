@@ -1,6 +1,6 @@
 ---
 title: "Pooling Layers"
-date: 2020-07-20
+date: 2020-07-26
 tags: [machine learning, data science, Pooling]
 
 excerpt: "Deep Learning, Pooling Layers"
@@ -11,7 +11,7 @@ mathjax: "true"
 
 Pooling layer is another building blocks in the convolutional neural networks. Before we address the topic of the pooling layers, let's take a look at a simple example of the convolutional neural network so as to summarize what has been done.
 
-### A Simple CovNet Example
+### A Simple ConvNet Example
 Suppose there is a $$39\times39\times3$$ input image and then apply it to three convolution layers with following steps:
 
 image
@@ -21,6 +21,12 @@ As shown in the figure above, the input layer $$a^{[0]}$$ is convolved with 10 f
 ### Pooling Layers
 In general, there are three types of layer in a convolutional neural network, which are convolution layer (CONV), pooling layer (POOL) and fully connected layer (FC). Typically, several convolution layers are followed by a pooling layer and a few fully connected layers are at the end of the convolutional network.
 
-The function of pooling layer is to reduce the spatial size of the representation to reduce the amount of parameters and computation in the network and it operates on each feature map (channels) independently. There are two types of pooling layers, which are *max pooling* and *average pooling*. However, max pooling is the one that is commonly used while average pooling is rarely used.
+The function of pooling layer is to reduce the spatial size of the representation to reduce the amount of parameters and computation in the network and it operates on each feature map (channels) independently. There are two types of pooling layers, which are *max pooling* and *average pooling*. However, max pooling is the one that is commonly used while average pooling is rarely used. The reason why max pooling layers work well in convolutional networks is that it helps the networks detect the features more efficiently after down-sampling an input representation and it helps over-fitting by providing an abstracted form of the representation.
 
-The operations of the max pooling is quite simple, only two hyperparameters are used in pooling layer, which are filter size ($$f$$) and stride ($$s$$).
+The operations of the max pooling is quite simple, only two hyperparameters are used in pooling layer, which are filter size $$(f)$$ and stride $$(s)$$. Notice that in pooling layers, we usually assume that there is no padding, that is $$p=0$$. Then we will illustrate two max pooling examples where $$f=2,s=2$$ and $$f=3,s=1$$.
+
+Image
+
+image
+
+As shown in the figure above, it is important to realize that **there is no parameters needed to learn in max pooling layer** and furthermore it helps the overall network reduce the amount of parameters needed to learn, which save the computation cost of the network because **the max pooling layer reduces $$n_H, n_W$$ but not $$n_c$$**.
