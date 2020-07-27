@@ -25,9 +25,13 @@ The function of pooling layer is to reduce the spatial size of the representatio
 
 ### Max Pooling
 
-The operations of the max pooling is quite simple since there are only two hyperparameters used, which are filter size $$(f)$$ and stride $$(s)$$. Notice that in pooling layers, we usually assume that there is no padding, that is $$p=0$$. Then we will illustrate two max pooling examples where $$f=2,s=2$$ and $$f=3,s=1$$ to demonstrate the process of the max pooling.
+The operations of the max pooling is quite simple since there are only two hyperparameters used, which are filter size $$(f)$$ and stride $$(s)$$. Notice that we usually assume there is no padding in pooling layers, that is $$p=0$$. Then we will illustrate two max pooling examples where $$f=2,s=2$$ and $$f=3,s=1$$ to demonstrate the process of the max pooling.
+
+Example 1 ($$f=2,s=2$$):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/pooling/max_pooling1.PNG" alt="">
+
+Example 2 ($$f=3,s=1$$):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/pooling/max_pooling2.PNG" alt="">
 
@@ -36,4 +40,4 @@ The operations of the max pooling is quite simple since there are only two hyper
 
 As shown in the figure above, it is important to realize that **there is no parameters needed to learn in max pooling layer** and furthermore it helps the overall network reduce the amount of parameters needed to learn, which save the computation cost of the network because **the max pooling layer reduces $$n_H, n_W$$ but not $$n_c$$**.
 
-In summary, since there are only two hyperparameters in pooling layers, filter size $$f$$ and stride $$s$$, the size of the pooling layer input is $$n_H\times n_W \times n_c$$ while the size of the pooling layer output is $$\lfloor \dfrac{n_H-f}{s}+1\rfloor \times \lfloor \dfrac{n_W-f}{s}+1\rfloor \times n_c$$. 
+In summary, since there are only two hyperparameters in pooling layers, filter size $$f$$ and stride $$s$$, the size of the pooling layer input is $$n_H\times n_W \times n_c$$ while the size of the pooling layer output is $$\lfloor \dfrac{n_H-f}{s}+1\rfloor \times \lfloor \dfrac{n_W-f}{s}+1\rfloor \times n_c$$.
