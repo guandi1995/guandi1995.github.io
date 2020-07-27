@@ -27,11 +27,11 @@ The function of pooling layer is to reduce the spatial size of the representatio
 
 The operations of the max pooling is quite simple since there are only two hyperparameters used, which are filter size $$(f)$$ and stride $$(s)$$. Notice that we usually assume there is no padding in pooling layers, that is $$p=0$$. Then we will illustrate two max pooling examples where $$f=2,s=2$$ and $$f=3,s=1$$ to demonstrate the process of the max pooling.
 
-Example 1 ($$f=2,s=2$$):
+#### Example 1 ($$f=2,s=2$$):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/pooling/max_pooling1.PNG" alt="">
 
-Example 2 ($$f=3,s=1$$):
+#### Example 2 ($$f=3,s=1$$):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/pooling/max_pooling2.PNG" alt="">
 
