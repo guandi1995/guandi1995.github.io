@@ -17,21 +17,21 @@ LeNet-5, a classical convolutional neural network that was introduced back to 19
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/LeNet-5.PNG" alt="">
 
-As shown above for the second model, the network takes a $$32\times32\times3$$ image as the input and convolve it with 6 $$5\times5\times3$$ filters and stride of 1, which results in a $$28\times28\times6$$ output and then apply the output to a max pooling layer with the filter size of $2\times2$ and stride of 2, which leads to a $$14\times14\times6$$ output. Then apply the same convolution and max pooling layer again to obtain a $$5\times5\times16$$ output. At the end of the network, the $$5\times5\times16$$ output is flattened to a vector with the size of $$400\times1$$ and then apply two fully connected layers to it and finally achieve the estimated output with the size of $$10\times1$$ by using softmax.
+As shown above for the second model, the network takes a $$32\times32\times3$$ image as the input and convolve it with 6 $$5\times5\times3$$ filters and stride of 1, which results in a $$28\times28\times6$$ output and then apply the output to a max pooling layer with the filter size of $$2\times2$$ and stride of 2, which leads to a $$14\times14\times6$$ output. Then apply the same convolution and max pooling layer again to obtain a $$5\times5\times16$$ output. At the end of the network, the $$5\times5\times16$$ output is flattened to a vector with the size of $$400\times1$$ and then apply two fully connected layers to it and finally achieve the estimated output with the size of $$10\times1$$ by using softmax.
 
 Take the second architecture as an example, let's practice how to compute the amounts of the parameters that are needed to learn in each layer of the network.
 
 |                            | Activation Size | Number of Parameters                    |
 | -------------------------- | --------------- | --------------------------------------- |
 | Input                      | (32,32,3)       | $$0$$                                   |
-| CONV1 (f=5, s=1, #6 filters)  | (28,28,6)       | $$(5\times5\times3+1)\times6=456$$      |
+| CONV1 (f=5, s=1, #6 filters)  | (28,28,6)       | $$(5\times5\times3+1^{[b]})\times6=456$$      |
 | POOL1 (f=2, s=2)             | (14,14,6)       | $$0$$                                   |
-| CONV2 (f=5, s=1, #16 filters) | (10,10,16)      | $$(5\times5\times6+1)\times16=2416$$    |
+| CONV2 (f=5, s=1, #16 filters) | (10,10,16)      | $$(5\times5\times6+1^{[b]})\times16=2416$$    |
 | POOL2 (f=2, s=2)             | (5,5,16)        | $$0$$                                   |
-| FC3 (120 neurons)           | (120,1)         | $$5\times5\times16\times120+120=48120$$ |
-| FC4 (84 neurons)            | (84,1)          | $$120\times84+84=10164$$                |
-| Softmax (10 neurons)        | (10,1)          | $$84\times10+10=850$$                   |
-
+| FC3 (120 neurons)           | (120,1)         | $$5\times5\times16\times120+120^{[b]}=48120$$ |
+| FC4 (84 neurons)            | (84,1)          | $$120\times84+84^{[b]}=10164$$                |
+| Softmax (10 neurons)        | (10,1)          | $$84\times10+10^{[b]}=850$$                   |
+where b=bias
 Therefore, the total number of parameters that the network needs to learn is approximately 62,000
 
 ### AlexNet
