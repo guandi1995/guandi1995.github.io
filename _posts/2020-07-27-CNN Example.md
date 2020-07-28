@@ -33,7 +33,7 @@ Take the second architecture as an example, let's practice how to compute the am
 | Softmax (10 neurons)        | (10,1)          | $$84\times10+10^{[b]}=850$$                   |
 
 where b=bias and note that in the LeNet-5 network, they applied non-linearity activation function of sigmoid after each max pooling layer.
-In summary, the total number of parameters that the network needs to learn is approximately 62,000. According to this classical architecture, there are actually several patterns that the modern architectures are still apply, which are the general structure of the networks - CONV --> POOL --> CONV --> POOL --> FC --> FC. That is convolution layers are followed by pooling layers and a few of fully connected layers are located in the end of the network. Additionally, the trend of nowadays networks also have the trend that $$n_H$$ and $$n_W$$ decrease while $$n_C$$ increases as the networks go deeper.
+In summary, the total number of parameters that the network needs to learn is approximately 62,000. According to this classical architecture, there are actually several patterns that the modern architectures still apply, which are the general structures of the networks - CONV --> POOL --> CONV --> POOL --> FC --> FC. That is， convolution layers are followed by pooling layers and a few of fully connected layers are located in the end of the network. Additionally, the trends of nowadays networks that $$n_H$$ and $$n_W$$ decrease while $$n_C$$ increases as the networks go deeper are still applying.
 
 ### AlexNet
 Similar to LeNet-5, AlexNet appl
