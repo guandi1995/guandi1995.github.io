@@ -39,8 +39,14 @@ where b=bias and note that in the LeNet-5 network, they applied non-linearity ac
 In summary, the total number of parameters that the network needs to learn is approximately 62,000. According to this classical architecture, there are actually several patterns that the modern architectures still apply, which are the general structures of the networks - CONV --> POOL --> CONV --> POOL --> FC --> FC. That is, convolution layers are followed by pooling layers and a few of fully connected layers are located in the end of the network. Additionally, the trends of nowadays networks that $$n_H$$ and $$n_W$$ decrease while $$n_C$$ increases as the networks go deeper are still applying.
 
 ### AlexNet
-AlexNet, introduced in 2012, employed an 8-layer convolutional neural network where the architecture is quite similar to LeNet-5, but there are also some significant differences. First, AlexNet is much deeper  since it consists of five convolution layers, two hidden fully-connected layers and one fully-connected output layer as shown in the figure below. Aside from that, AlexNet used the ReLu activation function instead of sigmoid.
+AlexNet, introduced in 2012, employs an 8-layer convolutional neural network where the architecture is quite similar to LeNet-5, but there are also some significant differences. First, AlexNet is much deeper  since it consists of five convolution layers, two hidden fully-connected layers and one fully-connected output layer as shown in the figure below. Aside from that, AlexNet used the ReLu activation function instead of sigmoid.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/AlexNet.PNG" alt="">
 
-In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. 
+In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object.
+
+### VGG-16
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16-simplified.PNG" alt="">
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16.PNG" alt="">
