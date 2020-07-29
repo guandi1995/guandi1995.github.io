@@ -8,4 +8,4 @@ mathjax: "true"
 ---
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/header_img.jpeg" alt="">
 
-In this post, we mainly focus on the modern architectures that are commonly used nowadays and have much powerful function so as to achieve higher accuracy for the taks of classfication and etc.
+In this post, we mainly focus on the modern architectures that are commonly used nowadays and have much powerful abilities so as to achieve higher accuracy for the tasks of classification and etc.
