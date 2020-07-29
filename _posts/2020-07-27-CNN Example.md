@@ -69,6 +69,7 @@ The total number of parameters needed to learn in AlexNet is approximately 60 mi
 
 
 ### VGG-16
+VGG-16, introduced in 2014, employs a 16-layer network, which is much deeper than AlexNet but offers a simpler network by replacing large kernel-size filters with multiple $$3\times3$$ kernel-sized filters one after another. Aside from that, VGG-16 focuses on possibly simpler network where all the convolutional layer's filter size are $$3\times3$$ with stride of 1 and same padding whereas the max pooling layers all apply $$2\times2$$ filter and stride of 2. The brief summary of VGG-16 is illustrated below.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16-simplified.PNG" alt="">
 
