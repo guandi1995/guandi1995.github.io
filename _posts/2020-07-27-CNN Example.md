@@ -15,7 +15,7 @@ LeNet-5, a classical convolutional neural network that was introduced back to 19
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/LeNet-5.PNG" alt="">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/LeNet-5.PNG" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/LeNet-5_modified.PNG" alt="">
 
 As shown above for the second model, the network takes a $$32\times32\times3$$ image as the input and convolve it with 6 $$5\times5\times3$$ filters and stride of 1, which results in a $$28\times28\times6$$ output and then apply the output to a max pooling layer with the filter size of $$2\times2$$ and stride of 2, which leads to a $$14\times14\times6$$ output. Then apply the same convolution and max pooling layer again to obtain a $$5\times5\times16$$ output. At the end of the network, the $$5\times5\times16$$ output is flattened to a vector with the size of $$400\times1$$ and then apply two fully connected layers to it and finally achieve the estimated output with the size of $$10\times1$$ by using softmax.
 
@@ -36,4 +36,6 @@ where b=bias and note that in the LeNet-5 network, they applied non-linearity ac
 In summary, the total number of parameters that the network needs to learn is approximately 62,000. According to this classical architecture, there are actually several patterns that the modern architectures still apply, which are the general structures of the networks - CONV --> POOL --> CONV --> POOL --> FC --> FC. That is， convolution layers are followed by pooling layers and a few of fully connected layers are located in the end of the network. Additionally, the trends of nowadays networks that $$n_H$$ and $$n_W$$ decrease while $$n_C$$ increases as the networks go deeper are still applying.
 
 ### AlexNet
-Similar to LeNet-5, AlexNet appl
+AlexNet, introduced in 2012, employed an 8-layer convolutional neural network where the architecture is quite similar to LeNet-5, but there are also some significant differences. First, AlexNet is much deeper  since it consists of five convolution layers, two hidden fully-connected layers and one fully-connected output layer as shown in the figure below. Aside from that, AlexNet used the ReLu activation function instead of sigmoid.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/AlexNet.PNG" alt="">
