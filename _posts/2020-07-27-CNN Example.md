@@ -73,4 +73,6 @@ VGG-16, introduced in 2014, employs a 16-layer network, which is much deeper tha
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16-simplified.PNG" alt="">
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16-summary.PNG" alt="">
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16.PNG" alt="">
