@@ -33,7 +33,7 @@ Take the second architecture as an example, let's practice how to compute the am
 | POOL2 (f=2, s=2)             | (5,5,16)        | $$0$$                                   |
 | FC3 (120 neurons)           | (120,1)         | $$5\times5\times16\times120+120^{[b]}=48120$$ |
 | FC4 (84 neurons)            | (84,1)          | $$120\times84+84^{[b]}=10164$$                |
-| FC5 (10 neurons,Softmax)        | (10,1)          | $$84\times10+10^{[b]}=850$$                   |
+| FC5 (10 neurons)        | (10,1)          | $$84\times10+10^{[b]}=850$$                   |
 
 where b=bias and note that in the LeNet-5 network, they applied non-linearity activation function of sigmoid after each max pooling layer.
 In summary, the total number of parameters that the network needs to learn is approximately 62,000. According to this classical architecture, there are actually several patterns that the modern architectures still apply, which are the general structures of the networks - CONV --> POOL --> CONV --> POOL --> FC --> FC. That is, convolution layers are followed by pooling layers and a few of fully connected layers are located in the end of the network. Additionally, the trends of nowadays networks that $$n_H$$ and $$n_W$$ decrease while $$n_C$$ increases as the networks go deeper are still applying.
@@ -43,7 +43,7 @@ AlexNet, introduced in 2012, employs an 8-layer convolutional neural network whe
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/AlexNet.PNG" alt="">
 
-In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. The brief structure of AlexNet can be illustrated as CONV-->POOL-->CONV-->POOL-->CONV-->CONV->CONV-->POOL-->FC-->FC-->FC. Notice that all convolutional layers in AlexNet apply the same padding and as the network goes deeper, more filters are used to convolve while the height and width of the activation shape are smaller. Furthermore, dropout is used after each fully connected layer in order to address the overfitting. 
+In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. The brief structure of AlexNet can be illustrated as CONV-->POOL-->CONV-->POOL-->CONV-->CONV->CONV-->POOL-->FC-->FC-->FC. Notice that all convolutional layers in AlexNet apply the same padding and as the network goes deeper, more filters are used to convolve while the height and width of the activation shape are smaller. Furthermore, dropout is used after each fully connected layer in order to address the overfitting.
 
 The amounts of the parameters that are needed to learn in each layer of the network is demonstrated below:
 
@@ -60,7 +60,7 @@ The amounts of the parameters that are needed to learn in each layer of the netw
 | POOL3(f=3,s=2)                 | $$(6,6,256)$$    | $$0$$                                           |
 | FC6(4096 neurons)              | $$(4096,1)$$     | $$6\times6\times256\times4096+4096=37,752,832$$ |
 | FC7(4096 neurons)              | $$(4096,1)$$     | $$4096\times4096+4096=16,781,312$$              |
-| FC8(1000 neurons, Softmax)     | $$(1000,1)$$     | $$4096\times1000+1000=4,097,000$$               |
+| FC8(1000 neurons)     | $$(1000,1)$$     | $$4096\times1000+1000=4,097,000$$               |
 
 
 The total number of parameters needed to learn in AlexNet is approximately 60 million, which are way larger than LeNet-5 are. The Pytorch version code of AlexNet is illustrated below
