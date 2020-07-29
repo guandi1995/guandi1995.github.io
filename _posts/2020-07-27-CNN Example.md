@@ -43,7 +43,7 @@ AlexNet, introduced in 2012, employs an 8-layer convolutional neural network whe
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/AlexNet.PNG" alt="">
 
-In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. The brief structure of AlexNet can be illustrated as CONV-->POOL-->CONV-->POOL-->CONV-->CONV->CONV-->POOL-->FC-->FC-->FC. Notice that all convolutional layers in AlexNet apply the same padding and as the network goes deeper, more filters are used to convolve while the height and width of the activation shape are smaller. Furthermore,
+In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. The brief structure of AlexNet can be illustrated as CONV-->POOL-->CONV-->POOL-->CONV-->CONV->CONV-->POOL-->FC-->FC-->FC. Notice that all convolutional layers in AlexNet apply the same padding and as the network goes deeper, more filters are used to convolve while the height and width of the activation shape are smaller. Furthermore, dropout is used after each fully connected layer in order to address the overfitting. 
 
 The amounts of the parameters that are needed to learn in each layer of the network is demonstrated below:
 
