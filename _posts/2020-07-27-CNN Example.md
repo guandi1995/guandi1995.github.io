@@ -46,6 +46,7 @@ AlexNet, introduced in 2012, employs an 8-layer convolutional neural network whe
 In the first layer of AlexNet, the convolution window size is $$11\times11\times3$$. This is because this model is implemented to classify the inputs from ImageNet, the dataset which has bigger size. Consequently, a larger convolution window is applied in the first layer in order to capture the object. The brief structure of AlexNet can be illustrated as CONV-->POOL-->CONV-->POOL-->CONV-->CONV->CONV-->POOL-->FC-->FC-->FC. Notice that all convolutional layers in AlexNet apply the same padding and as the network goes deeper, more filters are used to convolve while the height and width of the activation shape are smaller. Furthermore,
 
 The amounts of the parameters that are needed to learn in each layer of the network is demonstrated below:
+
 | Layers                         | Activation Size  | Numbers of Parameters                           |
 | ------------------------------ | ---------------- | ----------------------------------------------- |
 | Input                          | $$(227,227,3)$$  | $$0$$                                           |
@@ -60,6 +61,7 @@ The amounts of the parameters that are needed to learn in each layer of the netw
 | FC6(4096 neurons)              | $$(4096,1)$$     | $$6\times6\times256\times4096+4096=37,752,832$$ |
 | FC7(4096 neurons)              | $$(4096,1)$$     | $$4096\times4096+4096=16,781,312$$              |
 | FC8(1000 neurons, Softmax)     | $$(1000,1)$$     | $$4096\times1000+1000=4,097,000$$               |
+
 
 The total number of parameters needed to learn in AlexNet is approximately 60 million, which are way larger than LeNet-5 are. The Pytorch version code of AlexNet is illustrated below
 
