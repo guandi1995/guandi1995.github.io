@@ -75,4 +75,6 @@ VGG-16, introduced in 2014, employs a 16-layer network, which is much deeper tha
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16-summary.PNG" alt="">
 
+The patterns of VGG-16 are quite uniform that the network takes $$224\times224\times3$$ image as the input, followed by a stack of two and three convolutional layers and ReLu activation function, then reduce the height and width by using pooling layer. For the number of filters in each convolutional layer, they are 64, 128, 256, 512 and 512, where as the network goes deeper the number of filters double in each stack of convolutional layer. Overall, there are approximately 138 million parameters needed to learn. Another phenomena that the modern networks also apply is that as the network goes deeper, $$n_H,n_W$$ decrease due to the pooling layers and $$n_C$$ increases due to the increasing number of filters in convolutional layers. 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/vgg-16.PNG" alt="">
