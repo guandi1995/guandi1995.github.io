@@ -8,7 +8,7 @@ mathjax: "true"
 ---
 <img src="{{ site.url }}{{ site.baseurl }}/images/classical_cnn/header_img.jpeg" alt="">
 
-In this post, we mainly focus on one of the modern architectures, ResNet, that are commonly used nowadays and have much powerful abilities so as to achieve higher accuracy for the tasks of classification and etc. Theoretically, in convolutional neural networks, the training error or accuracy is supposed to decrease as the number of layers in CNN increases; however, in reality, as the number of convolutional layers increases, the training error does decrease but then increase again if the number of layers increases significantly. Fortunately, the innovation of ResNet helps us cope with this intractable problem. The figure below demonstrates the relationship between the training error and the number of layers in CNN in terms of "plain networks" and residual networks.
+In this post, we mainly focus on one of the modern architectures, ResNet, that are commonly used nowadays and have much powerful abilities so as to achieve higher accuracy for the tasks of classification and etc. Theoretically, in convolutional neural networks, the training error or accuracy is supposed to decrease as the number of layers in CNN increases; however, in reality the researchers found that as the number of convolutional layers increases, the training error does decrease but would increase again if the number of layers increases significantly to some certain amounts. This phenomena is called the degradation problem. Fortunately, the innovation of ResNet helps us cope with this intractable problem. The figure below demonstrates the relationship between the training error and the number of layers in CNN in terms of "plain networks" and residual networks.
 
 
 
@@ -26,4 +26,16 @@ $$z^{[l+2]}=W^{[l+2]}a^{[l+1]}+b^{[l+2]}$$
 
 $$a^{[l+2]}=g(z^{[l+2]})$$
 
-What residual block does is that instead of choosing the main path described above in plain networks, Residual networks choose to go through a short-cut path, which is also called skip-connection. 
+What residual block does as shown below is that instead of choosing the main path described above in plain networks, it chooses to go through a short-cut path, which is also called skip-connection that the network fast-forward/skip to right before the second ReLU activation function. Because of that, the formula for one residual block becomes as followed:
+
+$$z^{[l+1]}=W^{[l+1]}a^{[l]}+b^{[l+1]}$$
+
+$$a^{[l+1]}=g(z^{[l+1]})$$
+
+$$z^{[l+2]}=W^{[l+2]}a^{[l+1]}+b^{[l+2]}$$
+
+$$a^{[l+2]}=g(z^{[l+2]}+a^{[l]})$$
+
+The term of $$a^{[l]}$$ in the forth formula makes the network to residual network. The authors of ResNet found that using the residual blocks in network allows to train much deeper networks. The way how residual networks work is that by stacking each residual block shown above enables us to train deeper networks. In other words, we can skip the training of few layers using skip-connections or residual blocks.
+
+### Residual Network
