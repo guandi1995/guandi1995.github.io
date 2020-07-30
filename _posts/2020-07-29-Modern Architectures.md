@@ -26,9 +26,9 @@ a^{[l+2]}=g(z^{[l+2]})$$
 
 What residual block does as shown below is that instead of choosing the main path described above in plain networks, it chooses to go through a short-cut path, which is also called skip-connection that the network fast-forward/skip to right before the second ReLU activation function. Because of that, the formula for one residual block becomes as followed:
 
-$$z^{[l+1]}=W^{[l+1]}a^{[l]}+b^{[l+1]}//
-a^{[l+1]}=g(z^{[l+1]})//
-z^{[l+2]}=W^{[l+2]}a^{[l+1]}+b^{[l+2]}//
+$$z^{[l+1]}=W^{[l+1]}a^{[l]}+b^{[l+1]}\\
+a^{[l+1]}=g(z^{[l+1]})\\
+z^{[l+2]}=W^{[l+2]}a^{[l+1]}+b^{[l+2]}\\
 a^{[l+2]}=g(z^{[l+2]}+a^{[l]})$$
 
 The term of $$a^{[l]}$$ in the forth formula makes the network to residual network. The authors of ResNet found that using the residual blocks in network allows to train much deeper networks.
