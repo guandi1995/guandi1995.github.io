@@ -19,6 +19,11 @@ Image
 
 The formula described above can be summarized as:
 $$z^{[l+1]}=W^{[l+1]}a^{[l]}+b^{[l+1]}$$
+
 $$a^{[l+1]}=g(z^{[l+1]})$$
+
 $$z^{[l+2]}=W^{[l+2]}a^{[l+1]}+b^{[l+2]}$$
-$$a^{[l+2]}=g(z^{[l+1]})$$
+
+$$a^{[l+2]}=g(z^{[l+2]})$$
+
+What residual block does is that instead of choosing the main path described above in plain networks, Residual networks choose to go through a short-cut path, which is also called skip-connection. 
