@@ -14,6 +14,12 @@ Logistic regression is a technique in machine learning and is used to deal with 
 Consider a binary classification problem, given the input $$x$$, we want the estimated output that indicates which class the input is. Generally, we could estimate the probability of the output to between 0 or 1 and then set up a threshold that can help us decide its estimated class, which is also the estimated output. Therefore, denote the probability of the estimated output as $$\hat{y}$$ and let $$ \hat{y} = p(y~given~x) $$. Obviously, the value of $$\hat{y}$$ is supposed to be between 0 and 1, i.e. $$0 \le \hat{y} \le 1$$. On the other hand, our hypothesis model is $$z=wx+b$$ so as to estimate the output by using weight $$w$$ and bias $$b$$ where $$w\in R^n, b\in R$$. Clearly the value of $$z$$ is not the probability of chance that is between 0 and 1. Therefore, in order to generate the output in the form of probability, we need transform $$z$$ to $$\hat{y}$$ by using the logistic function or sigmoid function.
 
 
-### Sigmoid Function
+### Logistic/Sigmoid Function
+Instead of fitting a straight line or hyperplane, the logistic regression model uses the logistic function to squeeze the output of a linear operation equation between 0 and 1. It is defined as below:
 
-So what is sigmoid function?
+$$
+\sigma(z)=\dfrac{1}{1+e^{-z}}
+$$
+where $$\sigma(.)$$ is the logistic function notation.
+
+When 
