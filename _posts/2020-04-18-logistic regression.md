@@ -29,7 +29,7 @@ The graph of sigmoid function is illustrated below:
 
 When $$z$$ is positively large, the value of $$\sigma(z)$$ converges to 1 while $$z$$ is negatively small, the value of $$\sigma(z)$$ converges to 0.
 
-To summarize, the model that logistic regression uses is that given the input $$(x^{(1)},...,x^{(m)})$$ and corresponding outputs $$y^{(1)},...,y^{(m)}$$, we have the estimated outputs $$\hat{y}^{(i)}=\sigma(w^Tx^{(i)}+b)$$ where $$\sigma(z)=\dfrac{1}{1+e^{-z}}$$ and we want the estimated output $$\hat{y}^{(i)}$$ as close as to $$y^{(i)}$$ so as to achieve smaller loss. 
+To summarize, the model that logistic regression uses is that given the input $$\{x^{(1)},...,x^{(m)}\}$$ and corresponding outputs $$\{y^{(1)},...,y^{(m)}\}$$, we have the estimated outputs $$\hat{y}^{(i)}=\sigma(w^Tx^{(i)}+b)$$ where $$\sigma(z)=\dfrac{1}{1+e^{-z}}$$ and we want the estimated output $$\hat{y}^{(i)}$$ as close as to $$y^{(i)}$$ so as to achieve smaller loss.
 
 ### Logistic Regression Cost Function
 Unlike the cost function in linear regression, logistic regression does not apply the mean square error as its cost function since it will become a non-convex function, which is impossible to find the global minimum. In order to be a convex function and reach the global minimum when conducting the gradient descent, instead, the loss function for a single sample in the training dataset that the logistic regression applies is shown below:
@@ -39,3 +39,7 @@ L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(y^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]
 $$
 
 If $$y=1$$, the loss function becomes $$L(\hat{y}^{(i)},y^{(i)})=-log(\hat{y}^{(i)})$$. Theoretically, We want the loss function as small as possible to predict relatively accurate outputs. Consequently, we want the term $$-log(\hat{y}^{(i)})$$ as small as possible, but keep it in mind that the loss is always non-negative, that is, we want $$log(\hat{y}^{(i)})$$ large and $$\hat{y}^{(i)}$$ large as well. Another thing is that the value of $$\hat{y}$$ is between 0 and 1; therefore, we want $$\hat{y}$$ as close as to 1. In other words, the value of $$z$$ is supposed to be as large as possible due to the relationship between $$z$$ and $$\hat{y}$$ aforementioned.
+
+If $$y=0$$, the loss function becomes $$L(\hat{y}^{(i)},y^{(i)})=-log(1-\hat{y}^{(i)})$$, in order to make loss as small as possible, the terms of $$-log(1-\hat{y}^{(i)})$$ needs to be small enough, that is, we want $$log(1-\hat{y}^{(i)})$$ large and $$1-\hat{y}^{(i)}$$ large as well, which leads to a small enough positive value of $$\hat{y}^{(i)}$$ as close as to 0, which is also being said that the corresponding value of $$z$$ needs to be as negatively small as possible.
+
+Another way to think about this is by drawing the relationship graph between loss function and $$\hat{y}$$.  
