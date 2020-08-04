@@ -25,6 +25,6 @@ where $$\sigma(.)$$ is the logistic function notation.
 
 The graph of sigmoid function is illustrated below:
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/logistic regression/header_img.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/logistic regression/sigmoid_function.jfif" alt="">
 
-When 
+When $$z$$ is positively large, the value of $$\sigma(z)$$ converges to 1 while $$z$$ is negatively small, the value of $$\sigma(z)$$ converges to 0. 
