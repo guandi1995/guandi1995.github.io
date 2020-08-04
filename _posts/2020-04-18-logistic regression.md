@@ -51,5 +51,7 @@ Based on the loss function for a single sample in training dataset, the cost fun
 $$
 J(w,b)=\dfrac{1}{m} \sum_{i=1}^m L(\hat{y}^{(i)},y^{(i)})\\
 where~L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(y^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]\\
-and~\hat{y}^{(i)} = \sigma(w^Tx^{(i)}+b~where~\sigma(z)=\dfrac{1}{1+e^{-z}}
+and~\hat{y}^{(i)} = \sigma(w^Tx^{(i)}+b)~where~\sigma(z)=\dfrac{1}{1+e^{-z}}
 $$
+
+Our goal is to minimize the cost function for the entire training samples in terms of the parameters $$w$$ and $$b$$. One of methods to minimize the cost function is gradient descent, which is aimed to find the global minimum by looking for the gradient of the cost function in terms of the specific parameters. We will address the topic of gradient descent in the next post.
