@@ -30,4 +30,8 @@ The graph of sigmoid function is illustrated below:
 When $$z$$ is positively large, the value of $$\sigma(z)$$ converges to 1 while $$z$$ is negatively small, the value of $$\sigma(z)$$ converges to 0.
 
 ### Logistic Regression Cost Function
-Unlike the cost function in linear regression, logistic regression does not apply the mean square error as its cost function since it will become a non-convex function, which is impossible to find the global minimum. Instead, logistic regression is 
+Unlike the cost function in linear regression, logistic regression does not apply the mean square error as its cost function since it will become a non-convex function, which is impossible to find the global minimum. In order to be a convex function and reach the global minimum when conducting the gradient descent, instead, the loss function for a single sample in the training dataset that the logistic regression applies is shown below:
+
+$$
+L(\hat{y}^{(i)},y^{(i)})=-(logy^{(i)}+(1-y^{(i)})log(1-\hat{y}^{(i)})
+$$
