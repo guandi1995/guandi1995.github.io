@@ -45,3 +45,11 @@ If $$y=0$$, the loss function is $$L(\hat{y}^{(i)},y^{(i)})=-log(1-\hat{y}^{(i)}
 Another way to think about this is by considering the relationship between loss function and $$\hat{y}$$ as shown below. Notice that the value of $$\hat{y}$$ is always between 0 and 1. In the case when $$y=1$$, the relationship between loss and $$\hat{y}$$ is monotonically decreasing, thus in order to make loss small, we need $$\hat{y}$$ close to 1 and corresponding $$z$$ as positively large as possible. When $$y=0$$, the relationship is monotonically increasing; therefore, we want $$\hat{y}$$ close to 0 and corresponding value $$z$$ as negatively small as possible.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/logistic regression/loss_vs_y.PNG" alt="">
+
+Based on the loss function for a single sample in training dataset, the cost function in terms of the entire training dataset is defined as followed:
+
+$$
+J(w,b)=\dfrac{1}{m} \sum_{i=1}^m L(\hat{y}^{(i)},y^{(i)})\\
+where~L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(y^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]、、
+and \hat{y}^{(i)} = \sigma(w^Tx^{(i)}+b,\sigma(z)=\dfrac{1}{1+e^{-z}}
+$$
