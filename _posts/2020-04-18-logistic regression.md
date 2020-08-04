@@ -50,6 +50,6 @@ Based on the loss function for a single sample in training dataset, the cost fun
 
 $$
 J(w,b)=\dfrac{1}{m} \sum_{i=1}^m L(\hat{y}^{(i)},y^{(i)})\\
-where~L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(y^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]、、
-and \hat{y}^{(i)} = \sigma(w^Tx^{(i)}+b,\sigma(z)=\dfrac{1}{1+e^{-z}}
+where~L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(y^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]\\
+and~\hat{y}^{(i)} = \sigma(w^Tx^{(i)}+b~where~\sigma(z)=\dfrac{1}{1+e^{-z}}
 $$
