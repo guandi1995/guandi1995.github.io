@@ -23,4 +23,8 @@ $$
 
 where $$\sigma(.)$$ is the logistic function notation.
 
-When
+The graph of sigmoid function is illustrated below:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/logistic regression/header_img.png" alt="">
+
+When 
