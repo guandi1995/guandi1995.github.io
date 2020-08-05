@@ -9,7 +9,7 @@ mathjax: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/loss_function/header_image.jpg" alt="">
 
-In the previous posts, we discuss the loss function in terms of logistic regression and SVM algorithm. We know that the loss function is a function in terms of parameters such as $$w$$ and $$b$$. Now the question is how we find these parameters in order to achieve the minimum of loss function. It brings us to the topics of optimization, which refers to the task of minimizing the objective/loss function parameterized by $$w$$ and $$b$$.
+In the previous posts, we discuss the loss function in terms of logistic regression and SVM algorithms. We know that the loss function is a function in terms of parameters such as $$w$$ and $$b$$. Now the question is how we find these parameters in order to achieve the minimum of loss function. It brings us to the topics of optimization, which refers to the task of minimizing the objective/loss function parameterized by $$w$$ and $$b$$.
 
 Optimization algorithms have the following goals:
 
@@ -27,5 +27,6 @@ It is quite intuitive and simple if we take an example in one-dimensional space.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/1-d_grad_example.PNG" alt="">
 
-Therefore, the general steps and notes for conducting gradient descent in deep learning are shown below:
+In summary, the general steps and notes for conducting gradient descent in deep learning are shown below:
+
 **Step 1**
