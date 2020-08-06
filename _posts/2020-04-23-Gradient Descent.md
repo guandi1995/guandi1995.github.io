@@ -29,10 +29,12 @@ It is quite intuitive and simple if we take an example in one-dimensional space.
 
 In summary, the general steps and notes for conducting gradient descent in deep learning are shown below:
 
-**Step 1**: Initialize weight $$w$$ and bias $$b$$ to any random numbers.
+**Step 1**: initialize weight $$w$$ and bias $$b$$ to any random numbers.
 
 **Step 2**: select a learning rate $$\alpha$$ that determines how big the step would learn on each iteration. Note that if learning rate $$\alpha$$ is too small, it would take extremely large amount of time to converge and become computationally expensive for training while if $$\alpha$$ is too large, it may fail to converge and result in overshoot the minimum. Therefore, the choice of learning rate is quite importance and critical while training the deep neural networks. The relationship between the loss curve over epoch/iterations with different value of learning rate is illustrated below
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/learning_rate.PNG" alt="">
 
-**Step 3**:
+**Step 3**: normalize the data, otherwise the level curves(contours) would be narrow, which needs a longer time to converge. To illustrate it, we draw the contours for unnormalized and normalized data with respect to parameters $$w$$ and $$b$$. The contours demonstrate the value of loss when different values of $$w$$ and $$b$$ are taken.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/normalized.PNG" alt="">
