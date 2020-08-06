@@ -35,6 +35,8 @@ In summary, the general steps and notes for conducting gradient descent in deep 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/learning_rate.PNG" alt="">
 
-**Step 3**: normalize the data, otherwise the level curves(contours) would be narrow, which needs a longer time to converge. To illustrate it, we draw the contours for unnormalized and normalized data with respect to parameters $$w$$ and $$b$$. The contours demonstrate the value of loss when different values of $$w$$ and $$b$$ are taken.
+**Step 3**: normalize the data, otherwise the level curves (contours) would be narrow, which needs a longer time to converge. To illustrate it, we draw the contours for unnormalized and normalized data with respect to parameters $$w$$ and $$b$$. The contours demonstrate the value of loss when different values of $$w$$ and $$b$$ are taken. It is quite obvious that the unnormalized data is hard to converge compared to the normalized one. The way we normalize the data is quite straightforward, we could just normalize each sample data by using the formula $$\dfrac{x_i-\mu}{\sigma}$$.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/normalized.PNG" alt="">
+
+**Step 4**:
