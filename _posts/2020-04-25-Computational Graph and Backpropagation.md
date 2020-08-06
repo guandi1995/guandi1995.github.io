@@ -20,3 +20,7 @@ While for the backward pass or backpropagation, its ultimate goal is just to com
 <img src="{{ site.url }}{{ site.baseurl }}/images/computational graph/backward_pass_simple_example.PNG" alt="">
 
 First, compute the gradient of $$\dfrac{dJ}{dv}$$ on the most right hand side so as to be able to compute the gradient of $$\dfrac{dJ}{da}$$ while keep in mind that $$\dfrac{dJ}{da}=\dfrac{dJ}{dv}\dfrac{dv}{da}$$ by chain rule, that is, the value of $$\dfrac{dJ}{da}$$ is determined by $$\dfrac{dJ}{dv}$$, which is the gradient on its right hand side and this is also why we need to compute the gradient from right to left. To compute the gradient of $$\dfrac{dJ}{db}, \dfrac{dJ}{dc}$$, we need to compute the gradient of $$\dfrac{dJ}{du}$$ first since $$\dfrac{dJ}{db}=\dfrac{dJ}{du}\dfrac{du}{db}$$ and $$\dfrac{dJ}{dc}=\dfrac{dJ}{du}\dfrac{du}{dc}$$.
+
+Based on the previously simple example, let's draw the computational graph and compute the gradient of loss function for logistic regression discussed in the last post. Suppose there are only two features $$x_1,x_2$$ and thus $$x=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$, $$w=\begin{bmatrix}w_1&w_2\\\end{bmatrix}^T$$.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/computational graph/logistic_regression_gradient.PNG" alt="">
