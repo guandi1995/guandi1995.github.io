@@ -1,5 +1,5 @@
 ---
-title: "Optimization"
+title: "Optimization-Gradient Descent and Its Variants"
 date: 2020-04-19
 tags: [machine learning, optimization, gradient descent]
 
@@ -40,3 +40,9 @@ In summary, the general steps and notes for conducting gradient descent in deep 
 <img src="{{ site.url }}{{ site.baseurl }}/images/gradient descent/normalized.PNG" alt="">
 
 **Step 4**: update the parameters on each iteration. Using the equation described above to update parameters: $$w= w-\alpha \dfrac{dJ(w,b)}{dw}$$ and $$b= b-\alpha \dfrac{dJ(w,b)}{db}$$
+
+
+
+### Mini-batch Gradient Descent
+
+### Stochastic Gradient Descent
