@@ -42,7 +42,10 @@ In summary, the general steps and notes for conducting gradient descent in deep 
 **Step 4**: update the parameters on each iteration. Using the equation described above to update parameters: $$w= w-\alpha \dfrac{dJ(w,b)}{dw}$$ and $$b= b-\alpha \dfrac{dJ(w,b)}{db}$$
 
 
+For a m-sample training dataset, it might be quite challenging and time-consuming to conduct this regular type of gradient descent if $$m$$ is extremely large since for each iteration, we have to compute the gradient for all data samples just only for updating the parameters once on an iteration. Therefore, computing the gradient of the loss function over all data samples is not a wise way to reach, which leads us to another methods of gradient descent, which is mini-batch gradient descent.
 
 ### Mini-batch Gradient Descent
+Instead of going over all examples, mini-batch gradient descent sums up over a smaller number of examples
+
 
 ### Stochastic Gradient Descent
