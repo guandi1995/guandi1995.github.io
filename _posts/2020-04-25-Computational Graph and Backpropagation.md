@@ -25,6 +25,6 @@ First, compute the gradient of $$\dfrac{dJ}{dv}$$ on the most right hand side so
 
 ### Gradient of Logistic Regreession
 
-Based on the previously simple example, let's draw the computational graph and compute the gradient of loss function for logistic regression discussed in the last post. Suppose there are only two features $$x_1,x_2$$ and thus $$x=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$, $$w=\begin{bmatrix}w_1&w_2\\\end{bmatrix}^T$$. Then, to compute the gradient, we have three components, $$L(\hat{y}^{(i)},y^{(i)})=-[y^{(i)}~log(\hat{y}^{(i)})+(1-y^{(i)})log(1-\hat{y}^{(i)})]$$, $$\hat{y}=\sigma(z)$$ and $$z=wx+b$$ or $$z=w_1x_1+w_2x_2+b$$ in the direction from right to left.  
+Based on the previously simple example, let's draw the computational graph and compute the gradient of loss function for logistic regression discussed in the last post. Suppose there are only two features $$x_1,x_2$$ and thus $$x=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$, $$w=\begin{bmatrix}w_1&w_2\\\end{bmatrix}^T$$. Then, to compute the gradient, we have three components, $$L(\hat{y},y)=-[y~log(\hat{y})+(1-y)log(1-\hat{y})]$$, $$\hat{y}=\sigma(z)$$ and $$z=wx+b$$ or $$z=w_1x_1+w_2x_2+b$$ in the direction from right to left.  
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/computational graph/logistic_regression_gradient.PNG" alt="">
