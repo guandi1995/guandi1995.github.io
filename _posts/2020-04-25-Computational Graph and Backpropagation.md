@@ -23,18 +23,30 @@ While for the backward pass or backpropagation, its ultimate goal is just to com
 
 First, we have to compute the gradient of $$\dfrac{dJ}{dv}$$ on the most right hand side so as to be able to compute the gradient of $$\dfrac{dJ}{da}$$ next since $$\dfrac{dJ}{da}=\dfrac{dJ}{dv}\dfrac{dv}{da}$$ according to the chain rule. In other words, the value of $$\dfrac{dJ}{da}$$ is determined by $$\dfrac{dJ}{dv}$$, which is the gradient on its right hand side and this is also why we need to compute the gradient from right to left. To compute the gradients of $$\dfrac{dJ}{db}$$ and $$\dfrac{dJ}{dc}$$, we need to compute the gradient of $$\dfrac{dJ}{du}$$ first due to the facts that $$\dfrac{dJ}{db}=\dfrac{dJ}{du}\dfrac{du}{db}$$ and $$\dfrac{dJ}{dc}=\dfrac{dJ}{du}\dfrac{du}{dc}$$.
 
-### Gradient of Logistic Regreession
+### Gradient for Logistic Regreession
 
 Based on the previously simple example, let's draw the computational graph and compute the gradient of loss function for logistic regression discussed in the last post. Suppose there are only two features $$x_1,x_2$$ and thus $$x=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$, $$w=\begin{bmatrix}w_1&w_2\\\end{bmatrix}^T$$. Then, to compute the gradients of $$\dfrac{dL}{dw_1}$$,$$\dfrac{dL}{dw_2}$$ and $$\dfrac{dL}{db}$$, we have three components in the computational graph, $$L(\hat{y},y)=-[y~log(\hat{y})+(1-y)log(1-\hat{y})]$$, $$\hat{y}=\sigma(z)$$ and $$z=wx+b$$ or $$z=w_1x_1+w_2x_2+b$$ in the direction from right to left.  
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/computational graph/logistic_regression_gradient.PNG" alt="">
 
-Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the most right hand side first. Based on the fact from basic calculus that $$\dfrac{d}{dx}log(x)=\dfrac{1}{x}$$, we know that
+Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the most right hand side first. Based on the fact from basic calculus that $$\dfrac{d}{dx}log(x)=\dfrac{1}{x}$$, we know that:
+
+
 $$
 \dfrac{dL}{d\hat{y}}=\dfrac{d}{d\hat{y}}[-y~log(\hat{y})-(1-y)log(1-\hat{y})]
 =-\dfrac{y}{\hat{y}}-\dfrac{1-y}{1-\hat{y}}
 $$
-Then we need to compute the gradient of $$\dfrac{dL}{dz}$$ which can be inferred as $$\dfrac{dL}{dz}=\dfrac{dL}{d\hat{y}}\dfrac{d\hat{y}}{dz}$$; therefore, we have to find out the gradient of $$\dfrac{d\hat{y}}{dz}$$ first and the proof is shown below:
-$$
 
+Then in order to compute the gradient of $$\dfrac{dL}{dz}$$ which can be inferred as $$\dfrac{dL}{dz}=\dfrac{dL}{d\hat{y}}\dfrac{d\hat{y}}{dz}$$, we have to find out the gradient of $$\dfrac{d\hat{y}}{dz}$$ first and the proof is shown below:
+
+$$
+\begin{align*}
+\dfrac{d\hat{y}}{dz}&=\dfrac{d}{dz}(1+e^{-z})^{-1}\\
+&=-(1+e^{-z})^{-2}(-e^{-z})\\
+&=\dfrac{e^{-z}}{(1+e^{-z})^2}\\
+&=(\dfrac{1}{1+e^{-z}})(\dfrac{e^{-z}}{1+e^{-z}})\\
+&=(\dfrac{1}{1+e^{-z}})(\dfrac{1+e^{-z}-1}{1+e^{-z}})\\
+&=(\dfrac{1}{1+e^{-z}})(1-\dfrac{1}{1+e^{-z}})\\
+&=\hat{y}(1-\hat{y})
+\end{align*}
 $$
