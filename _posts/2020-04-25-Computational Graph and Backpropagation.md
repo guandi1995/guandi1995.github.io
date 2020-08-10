@@ -33,8 +33,10 @@ Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the mo
 
 
 $$
-\dfrac{dL}{d\hat{y}}=\dfrac{d}{d\hat{y}}[-y~log(\hat{y})-(1-y)log(1-\hat{y})]
-=-\dfrac{y}{\hat{y}}+\dfrac{1-y}{1-\hat{y}}
+\begin{align*}
+\dfrac{dL}{d\hat{y}}&=\dfrac{d}{d\hat{y}}[-y~log(\hat{y})-(1-y)log(1-\hat{y})]
+&=-\dfrac{y}{\hat{y}}+\dfrac{1-y}{1-\hat{y}}
+\end{align*}
 $$
 
 Then in order to compute the gradient of $$\dfrac{dL}{dz}$$ which can be inferred as $$\dfrac{dL}{dz}=\dfrac{dL}{d\hat{y}}\dfrac{d\hat{y}}{dz}$$, we have to find out the gradient of $$\dfrac{d\hat{y}}{dz}$$ first and the proof is shown below:
@@ -70,3 +72,5 @@ $$
 \dfrac{dL}{dw_2} = \dfrac{dL}{dz}\dfrac{dz}{dw_2} = (\hat{y}-y)x_2\\
 \dfrac{dL}{db} = \dfrac{dL}{dz}\dfrac{dz}{db} = \hat{y}-y\\
 $$
+
+Then, on each iteration, we use the above equations to compute those gradients and update the parameters $$w_1,w_2,b$$ by using the formulas $$w_1:=w_1-\alpha dfrac{dL}{dw_1}$$, $$w_2:=w_2-\alpha dfrac{dL}{dw_2}$$ and $$b:=b-\alpha dfrac{dL}{db}$$. However, this is just for single sample instead of the entire sample. 
