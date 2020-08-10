@@ -34,7 +34,7 @@ Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the mo
 
 $$
 \dfrac{dL}{d\hat{y}}=\dfrac{d}{d\hat{y}}[-y~log(\hat{y})-(1-y)log(1-\hat{y})]
-=-\dfrac{y}{\hat{y}}-\dfrac{1-y}{1-\hat{y}}
+=-\dfrac{y}{\hat{y}}+\dfrac{1-y}{1-\hat{y}}
 $$
 
 Then in order to compute the gradient of $$\dfrac{dL}{dz}$$ which can be inferred as $$\dfrac{dL}{dz}=\dfrac{dL}{d\hat{y}}\dfrac{d\hat{y}}{dz}$$, we have to find out the gradient of $$\dfrac{d\hat{y}}{dz}$$ first and the proof is shown below:
@@ -48,5 +48,17 @@ $$
 &=(\dfrac{1}{1+e^{-z}})(\dfrac{1+e^{-z}-1}{1+e^{-z}})\\
 &=(\dfrac{1}{1+e^{-z}})(1-\dfrac{1}{1+e^{-z}})\\
 &=\hat{y}(1-\hat{y})
+\end{align*}
+$$
+
+Therefore, based on the above inference, we have
+
+$$
+\begin{align*}
+\dfrac{dL}{dz}=\dfrac{dL}{d\hat{y}}\dfrac{d\hat{y}}{dz}&=
+(-\dfrac{y}{\hat{y}}+\dfrac{1-y}{1-\hat{y}})(\hat{y}(1-\hat{y}))\\
+&=-y(1-\hat{y})+(1-y)\hat{y}\\
+&=-y+y\hat{y}+\hat{y}-y\hat{y}\\
+&=\hat{y}-y
 \end{align*}
 $$
