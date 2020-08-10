@@ -29,7 +29,7 @@ Based on the previously simple example, let's draw the computational graph and c
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/computational graph/logistic_regression_gradient.PNG" alt="">
 
-Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the most right hand side first. Based on the fact from basic calculus that $$\dfrac{d}{dx}log(x)=\dfrac{1}{x}$$, we know that:
+Therefore, we need to compute the gradient of $$\dfrac{dL}{d\hat{y}}$$ on the most right hand side first. Based on the fact from basic calculus that $$\dfrac{d}{dx}log(x)=\dfrac{1}{x}$$ and $$\dfrac{d}{dx}log(-x)=-\dfrac{1}{x}$$, we know that:
 
 
 $$
@@ -51,7 +51,7 @@ $$
 \end{align*}
 $$
 
-Therefore, based on the above inference, we have
+Based on the above inference, we have
 
 $$
 \begin{align*}
@@ -61,4 +61,12 @@ $$
 &=-y+y\hat{y}+\hat{y}-y\hat{y}\\
 &=\hat{y}-y
 \end{align*}
+$$
+
+Therefore, $$\dfrac{dL}{dz}==\hat{y}-y$$. Our ultimate goal is to compute the gradients of $$\dfrac{dL}{dw_1}$$,$$\dfrac{dL}{dw_2}$$ and $$\dfrac{dL}{db}$$. It is much simpler to compute those three gradients once we find out the value of $$\dfrac{dL}{dz}$$ and thus we have
+
+$$
+\dfrac{dL}{dw_1} = \dfrac{dL}{dz}\dfrac{dz}{dw_1} = (\hat{y}-y)x_1\\
+\dfrac{dL}{dw_2} = \dfrac{dL}{dz}\dfrac{dz}{dw_2} = (\hat{y}-y)x_2\\
+\dfrac{dL}{db} = \dfrac{dL}{dz}\dfrac{dz}{db} = \hat{y}-y\\
 $$
