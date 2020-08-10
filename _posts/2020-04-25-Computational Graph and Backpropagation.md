@@ -73,4 +73,4 @@ $$
 \dfrac{dL}{db} = \dfrac{dL}{dz}\dfrac{dz}{db} = \hat{y}-y\\
 $$
 
-Then, on each iteration, we use the above equations to compute those gradients and update the parameters $$w_1,w_2,b$$ by using the formulas $$w_1:=w_1-\alpha dfrac{dL}{dw_1}$$, $$w_2:=w_2-\alpha dfrac{dL}{dw_2}$$ and $$b:=b-\alpha dfrac{dL}{db}$$. However, this is just for single sample instead of the entire sample. 
+Then, on each iteration, we use the above equations to compute those gradients and update the parameters $$w_1,w_2,b$$ by using the formulas $$w_1:=w_1-\alpha \dfrac{dL}{dw_1}$$, $$w_2:=w_2-\alpha dfrac{dL}{dw_2}$$ and $$b:=b-\alpha \dfrac{dL}{db}$$. However, this is just for single sample instead of the entire sample. 
