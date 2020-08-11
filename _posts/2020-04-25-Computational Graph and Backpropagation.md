@@ -73,4 +73,6 @@ $$
 \dfrac{dL}{db} = \dfrac{dL}{dz}\dfrac{dz}{db} = \hat{y}-y\\
 $$
 
-Then, on each iteration, we use the above equations to compute those gradients and update the parameters $$w_1,w_2,b$$ by using the formulas $$w_1:=w_1-\alpha \dfrac{dL}{dw_1}$$, $$w_2:=w_2-\alpha \dfrac{dL}{dw_2}$$ and $$b:=b-\alpha \dfrac{dL}{db}$$. However, this is just for single sample instead of the entire sample. 
+Then, on each iteration, we use the above equations to compute those gradients and update the parameters $$w_1,w_2,b$$ by using the formulas $$w_1:=w_1-\alpha \dfrac{dL}{dw_1}$$, $$w_2:=w_2-\alpha \dfrac{dL}{dw_2}$$ and $$b:=b-\alpha \dfrac{dL}{db}$$. However, this is just the updates for parameters in terms of single sample instead of the entire sample. Once the sample size is extremely large and if we use for loop to update the parameters for each sample, it will take tons of time, which is not a wise way to do so. Next, we will address how to vectorize the logistic regression in order to update the parameters quickly by vectorizing.
+
+### Vectorizing Logistic Regression
