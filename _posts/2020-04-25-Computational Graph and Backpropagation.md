@@ -96,11 +96,13 @@ On the other hand, to compute the gradient of $$\dfrac{dL}{dw}$$, we have
 $$
 \begin{align*}
 \dfrac{dL}{dw}&=\dfrac{1}{m}[(\hat{y}^{(1)}-y^{(1)})x^{(1)}+...+(\hat{y}^{(m)}-y^{(m)})x^{(m)}]\\
-&=\dfrac{1}{m}(dz^{(1)}x^{(1)}+...+dz^{(m)}x^{(m)})
+&=\dfrac{1}{m}(dz^{(1)}x^{(1)}+...+dz^{(m)}x^{(m)})\\
 &=\dfrac{1}{m}\begin{bmatrix}x^{(1)}&..&x^{(m)}\\\end{bmatrix}
 \begin{bmatrix}dz^{(1)}&..&dz^{(m)}\\\end{bmatrix}^T\\
 &=\dfrac{1}{m}Xdz^T
 \end{align*}
 $$
 
-where $$X=\begin{bmatrix}x^{(1)}&..&x^{(m)}\\\end{bmatrix}$$ and $$X\in R^{n\times m}$$. Therefore, we can use the formula of $$\dfrac{dL}{dw}=\dfrac{1}{m}Xdz^T$$ to compute the gradient of $$\dfrac{dL}{dw}$$. 
+where $$X=\begin{bmatrix}x^{(1)}&..&x^{(m)}\\\end{bmatrix}$$ and $$X\in R^{n\times m}$$. Therefore, we can use the formula of $$\dfrac{dL}{dw}=\dfrac{1}{m}Xdz^T$$ to compute the gradient of $$\dfrac{dL}{dw}$$.
+
+In summary, to compute the gradients
