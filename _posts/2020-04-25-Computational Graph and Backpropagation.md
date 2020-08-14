@@ -109,11 +109,11 @@ In summary, to compute the gradients and update the parameters of $$w,b$$ on eac
 
 ```python
 for iteration in range(100):
-    z = w^T * X + b
+    z = np.dot(w.T, X) + b
     A = sigma(z)
     dz = A - Y
-    dw = 1/m * X * dz.T
-    db = 1/m * np.sum(dz)
+    dw = np.dot(X, dz.T) / m
+    db = np.sum(dz) / m
     w -= alpha * dw
     b -= alpha * db
 ```
