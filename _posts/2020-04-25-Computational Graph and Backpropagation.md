@@ -79,11 +79,20 @@ Then, on each iteration, we use the above equations to compute those gradients a
 First of all, the thing we need to notice is that the logistic regression example for a single sample shown above is under the assumption that the dimension feature are two dimensions, that is $$x=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$. Consequently, the formulas we have above are $$\dfrac{dL}{dw_1} = (\hat{y}-y)x_1$$, $$\dfrac{dL}{dw_2}= (\hat{y}-y)x_2$$. Suppose the feature dimensions are n-dimension, then the gradient formulas for $$\dfrac{dL}{dw_i}$$ where $$i\in\{1,..,n\}$$ is $$\dfrac{dL}{dw_i} = (\hat{y}-y)x_i$$. To vectorize it, we have $$\dfrac{dL}{dw} = (\hat{y}-y)x$$ where $$x=\begin{bmatrix}x_1&..&x_n\\\end{bmatrix}^T$$ and $$w=\begin{bmatrix}w_1&..&w_n\\\end{bmatrix}^T$$.
 
 
-Therefore, for a single sample, we have inferred that $$\dfrac{dL}{dz}^{(j)}=\hat{y}^{(j)}-y^{(j)}$$ and then $$\dfrac{dL}{dw}^{(j)}=(\hat{y}^{(j)}-y^{(j)})x^{j}$$, $$\dfrac{dL}{db}^{(j)}=\hat{y}^{(j)}-y^{(j)}$$ where $$j\in\{1,...,m\}$$ and $$m$$ is the sample size. Now, if we compute the gradients over the entire sample, then the formula to compute $$\dfrac{dL}{db}$$ is
+Therefore, for a single sample, we have inferred that $$\dfrac{dL}{dz}^{(j)}:=dz^{(j)}=\hat{y}^{(j)}-y^{(j)}$$ and then $$\dfrac{dL}{dw}^{(j)}=(\hat{y}^{(j)}-y^{(j)})x^{j}$$, $$\dfrac{dL}{db}^{(j)}=\hat{y}^{(j)}-y^{(j)}=dz^{(j)}$$ where $$j\in\{1,...,m\}$$ and $$m$$ is the sample size. Now, if we compute the gradients over the entire sample, then the formula to compute $$\dfrac{dL}{db}$$ is
 
 $$
 \begin{align*}
 \dfrac{dL}{db}&=\dfrac{1}{m}[\hat{y}^{(1)}-y^{(1)}+...+\hat{y}^{(m)}-y^{(m)}]\\
-&=\dfrac{1}{m}(\dfrac{dL}{dz}^{(1)}+...+\dfrac{dL}{dz}^{(m)})
+&=\dfrac{1}{m}(dz^{(1)}+...+dz^{(m)})
+\end{align*}
+$$
+
+On the other hand, to compute the gradient of $$\dfrac{dL}{dw}$$, we have
+
+$$
+\begin{align*}
+\dfrac{dL}{dw}&=\dfrac{1}{m}[(\hat{y}^{(1)}-y^{(1)})x^{(1)}+...+(\hat{y}^{(m)}-y^{(m)})x^{(m)}]\\
+&=\dfrac{1}{m}(dz^{(1)}x^{(1)}+...+dz^{(m)}x^{(m)})
 \end{align*}
 $$
