@@ -105,4 +105,15 @@ $$
 
 where $$X=\begin{bmatrix}x^{(1)}&..&x^{(m)}\\\end{bmatrix}$$ and $$X\in R^{n\times m}$$. Therefore, we can use the formula of $$\dfrac{dL}{dw}=\dfrac{1}{m}Xdz^T$$ to compute the gradient of $$\dfrac{dL}{dw}$$.
 
-In summary, to compute the gradients
+In summary, to compute the gradients and update the parameters of $$w,b$$ on each iteration (suppose 100 iterations total), the vanilla code is illustrated below:
+
+```python
+for iteration in range(100):
+    z = w^T * X + b
+    A = sigma(z)
+    dz = A - Y
+    dw = 1/m * X * dz.T
+    db = 1/m * np.sum(dz)
+    w -= alpha * dw
+    b -= alpha * db
+```
