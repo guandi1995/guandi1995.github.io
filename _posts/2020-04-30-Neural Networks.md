@@ -17,9 +17,12 @@ In the following posts, we will discuss the neural networks in machine learning 
 
 The left figure illustrates a two-layer fully-connected neural network with one hidden layer and one output layer while the right one shows a three-layer fully-connected neural network with two hidden layers and one output layer.
 
-One of the most important thing in neural networks is that each layer generally has an activation function except the output layers. This is because the last output layer is usually taken as real-valued numbers to represent the class scores (e.g. classification) or as real-valued target (e.g. regression).
+One of the most important thing in neural networks is that each layer generally has an activation function except the output layer. This is because the last output layer is usually taken as real-valued numbers to represent the class scores (e.g. classification) or as real-valued target (e.g. regression). The reason why each layer has an activation function will be discussed below in the section of Activation Function.
 
-The below figure demonstrates an example of two-layer neural networks notation.
+The figure below demonstrates an example of two-layer neural networks notation.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/notation.jpg" alt="">
+
 
 ### Computing a Neural Network's Output
 
