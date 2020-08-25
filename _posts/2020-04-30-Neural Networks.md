@@ -23,6 +23,7 @@ The figure below demonstrates an example of two-layer neural networks notation.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/notation.jpg" alt="">
 
+The input layer is denotes as $$a^{[0]}$$ while the first hidden layer is denoted as $$a^{[1]}$$ and it has three hidden units, which are denoted as $$a_i^{[1]}$$.
 
 ### Computing a Neural Network's Output
 
