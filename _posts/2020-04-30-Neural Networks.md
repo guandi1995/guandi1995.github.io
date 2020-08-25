@@ -44,6 +44,12 @@ z^{[1]}=\begin{bmatrix}z_1^{[1]}\\z_2^{[1]}\\z_3^{[1]}\end{bmatrix}=
 \begin{bmatrix}x_1\\x_2\end{bmatrix} + \begin{bmatrix}b_1^{[1]}\\b_2^{[1]}\\b_3^{[1]}\end{bmatrix}
 $$
 
+and
+
+$$
+a^{[1]}=\begin{bmatrix}a_1^{[1]}\\a_2^{[1]}\\a_3^{[1]}\end{bmatrix}=
+\begin{bmatrix}\sigma(z_1^{[1]})\\\sigma(z_2^{[1]})\\\sigma(z_3^{[1]})\end{bmatrix}
+$$
 
 ### Vectorizing across Multiple Examples
 
