@@ -79,6 +79,6 @@ where $$a^{[0]}=x$$ by denoting $$W^{[1]}=\begin{bmatrix}-{w_1^{[1]}}^T-\\-{w_2^
 
 
 ### Vectorizing across Multiple Examples
-
+What we discussed above is in terms of the single training sample, now let's address how we compute the output in terms of the entire samples. Suppose we have $$m$$ training examples. Denote $$x^{(i)}$$ as the $$i$$-th input example and $$z^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer before the activation function while $$a^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer after the activation function. Same interpretation for $$z^{[2](i)}$$ and $$a^{[2](i)}$$. 
 
 ### Activation Function
