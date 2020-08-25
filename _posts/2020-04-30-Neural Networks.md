@@ -31,10 +31,15 @@ After being familiar with the notation of neural networks, let's discuss how to 
 The value of $$a_i^{[1]}$$ is obtained by mapping the function of $$a_i^{[1]}=\sigma(z_i^{[1]})$$ where $$\sigma(.)$$ is the sigmoid activation function while the value of $$z_i^{[1]}$$ is computed by the formula $$z_i^{[1]}={w_i^{[1]}}^T x+b_i^{[1]}$$ where $$w_i^{[1]}$$ is the weight with the shape of (2,1) and $$b_i^{[1]}$$ is a real number bias term. Then, the exact value of $$a_i^{[1]}$$ and $$z_i^{[1]}$$ is computed by the following demonstration:
 
 $$
-z_1^{[1]}={w_1^{[1]}}^T x+b_1^{[1]}, a_1^{[1]}=\sigma(z_1^{[1]})\\
-z_2^{[1]}={w_2^{[1]}}^T x+b_2^{[1]}, a_2^{[1]}=\sigma(z_2^{[1]})\\
-z_3^{[1]}={w_3^{[1]}}^T x+b_3^{[1]}, a_3^{[1]}=\sigma(z_3^{[1]})\\
+z_1^{[1]}={w_1^{[1]}}^T x+b_1^{[1]}, ~~a_1^{[1]}=\sigma(z_1^{[1]})\\
+z_2^{[1]}={w_2^{[1]}}^T x+b_2^{[1]}, ~~a_2^{[1]}=\sigma(z_2^{[1]})\\
+z_3^{[1]}={w_3^{[1]}}^T x+b_3^{[1]}, ~~a_3^{[1]}=\sigma(z_3^{[1]})\\
+$$
 
+Now, to vectorize those three terms, we have
+
+$$
+z^{[1]}=\begin{bmatrix}z_1^{[1]}\\z_2^{[1]}\\z_3^{[1]}\end{bmatrix}
 $$
 
 
