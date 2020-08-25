@@ -66,16 +66,16 @@ a^{[2]}=\begin{bmatrix}a_1^{[2]}\end{bmatrix}=
 \begin{bmatrix}\sigma(z_1^{[2]})\end{bmatrix}
 $$
 
-With that all being said, we have the vectorized version of computation for the overall neural networks, which are
+To summarize, we have the vectorized version of computation for the overall neural networks, which are
 
 $$
 z^{[1]}=W^{[1]}a^{[0]}+b^{[1]}\\
 a^{[1]}=\sigma(z^{[1]})\\
-z^{[2]}=W^{[2]}a^{[1]}+b^{[1]}\\
+z^{[2]}=W^{[2]}a^{[1]}+b^{[2]}\\
 a^{[2]}=\sigma(z^{[2]})\\
 $$
 
-where $$a^{[0]}=x$$, $$W^{[1]}=\begin{bmatrix}-{w_1^{[1]}}^T-\\-{w_2^{[1]}}^T-\\-{w_3^{[1]}}^T-\end{bmatrix}$$ with the shape of (3,2) and $$b^{[1]}=\begin{bmatrix}b_1^{[1]}\\b_2^{[1]}\\b_3^{[1]}\end{bmatrix}$$. 
+where $$a^{[0]}=x$$ by denoting $$W^{[1]}=\begin{bmatrix}-{w_1^{[1]}}^T-\\-{w_2^{[1]}}^T-\\-{w_3^{[1]}}^T-\end{bmatrix}$$ with the shape of (3,2) and $$b^{[1]}=\begin{bmatrix}b_1^{[1]}\\b_2^{[1]}\\b_3^{[1]}\end{bmatrix}$$ with the shape of (3,1), which results in $$z^{[1]}$$ with the shape of (3,1). On the other hand, $$W^{[2]}=\begin{bmatrix}-{w_1^{[2]}}^T-\end{bmatrix}$$ with the shape of (1,3).
 
 
 ### Vectorizing across Multiple Examples
