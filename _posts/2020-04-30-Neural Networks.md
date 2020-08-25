@@ -54,12 +54,28 @@ $$
 While the values for the second hidden layer, $$z_i^{[1]}$$ and $$a_i^{[1]}$$ can be computed based on the formulas below:
 
 $$
-z^{[2]} = \begin{bmatrix}z_1^{[1]}\end{bmatrix} =
-\begin{bmatrix}-{w_1^{[1]}}^T-\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix} +
- \begin{bmatrix}b_1^{[1]}\end{bmatrix}
+z^{[2]} = \begin{bmatrix}z_1^{[2]}\end{bmatrix} =
+\begin{bmatrix}-{w_1^{[2]}}^T-\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix} +
+ \begin{bmatrix}b_1^{[2]}\end{bmatrix}
 $$
 
-With that being said, we have the vectorized version
+and
+
+$$
+a^{[2]}=\begin{bmatrix}a_1^{[2]}\end{bmatrix}=
+\begin{bmatrix}\sigma(z_1^{[2]})\end{bmatrix}
+$$
+
+With that being said, we have the vectorized version of computation for the overall neural networks, which are
+
+$$
+z^{[1]}=W^{[1]}a^{[0]}+b^{[1]}
+a^{[1]}=\sigma(z^{[1]})
+z^{[2]}=W^{[2]}a^{[1]}+b^{[1]}
+a^{[2]}=\sigma(z^{[2]})
+$$
+
+where $$a^{[0]}=input~x$$
 
 
 ### Vectorizing across Multiple Examples
