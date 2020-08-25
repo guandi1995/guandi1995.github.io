@@ -23,10 +23,12 @@ The figure below demonstrates an example of two-layer neural networks notation.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/notation.jpg" alt="">
 
-The input layer is denotes as $$a^{[0]}$$ while the first hidden layer is denoted as $$a^{[1]}$$ and it has three hidden units total. Each hidden unit is denoted as $$a_i^{[1]}$$, represented as the $$i$$-th hidden unit in the 1st hidden layer.
+The input layer is denotes as $$a^{[0]}$$ while the first hidden layer is denoted as $$a^{[1]}$$ and it has three hidden units total. Each hidden unit is denoted as $$a_i^{[1]}$$, represented as the $$i$$-th hidden unit in the 1st hidden layer. Additionally, we denote the vectorized  first-hidden-layer as $$a^{[1]}$$ and $$a^{[1]}=\begin{bmatrix}a_1^{[1]}&a_2^{[1]}&a_3^{[1]}\\\end{bmatrix}^T$$.
 
 ### Computing a Neural Network's Output
-After being familiar with the notation of neural networks, let's discuss how to compute the final output through the hidden layers. Take the same neural network example above, we have a single sample input $$x=a^{[0]}=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$. The value of $$a_i^{[1]}$$ is obtained by mapping the function of $$a_i^{[1]}=\sigma(z_i^{[1]})$$ while the value of $$z_i^{[1]}$$ is computed by the formula of $$z_i^{[1]}=w_i^{[1]}x+b_i^{[1]}$$. 
+After being familiar with the notation of neural networks, let's discuss how to compute the final output through the hidden layers. Take the same neural network example above, we have a single sample input $$x=a^{[0]}=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$ with the shape of (2,1).
+
+The value of $$a_i^{[1]}$$ is obtained by mapping the function of $$a_i^{[1]}=\sigma(z_i^{[1]})$$ where $$\sigma(.)$$ is the sigmoid activation function while the value of $$z_i^{[1]}$$ is computed by the formula of $$z_i^{[1]}=w_i^{[1]}^Tx+b_i^{[1]}$$ where $$w_i^{[1]}$$ is the weight with the shape of (2,1) and $$b_i^{[1]}$$ is a real number bias term.
 
 ### Vectorizing across Multiple Examples
 
