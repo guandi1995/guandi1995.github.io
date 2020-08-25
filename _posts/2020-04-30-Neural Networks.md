@@ -28,7 +28,7 @@ The input layer is denotes as $$a^{[0]}$$ while the first hidden layer is denote
 ### Computing a Neural Network's Output
 After being familiar with the notation of neural networks, let's discuss how to compute the final output through the hidden layers. Take the same neural network example above, we have a single sample input $$x=a^{[0]}=\begin{bmatrix}x_1&x_2\\\end{bmatrix}^T$$ with the shape of (2,1).
 
-The value of $$a_i^{[1]}$$ is obtained by mapping the function of $$a_i^{[1]}=\sigma(z_i^{[1]})$$ where $$\sigma(.)$$ is the sigmoid activation function while the value of $$z_i^{[1]}$$ is computed by the formula $$z_i^{[1]}={w_i^{[1]}}^T x+b_i^{[1]}$$ where $$w_i^{[1]}$$ is the weight with the shape of (2,1) and $$b_i^{[1]}$$ is a real number bias term. Then, the exact value of $$a_i^{[1]}$$ and $$z_i^{[1]}$$ is computed by the following demonstration:
+The value of $$a_i^{[1]}$$ is obtained by mapping the function of $$a_i^{[1]}=\sigma(z_i^{[1]})$$ where $$\sigma(.)$$ is the sigmoid activation function while the value of $$z_i^{[1]}$$ is computed by the formula $$z_i^{[1]}={w_i^{[1]}}^T x+b_i^{[1]}$$ where $$w_i^{[1]}$$ is the weight with the shape of (2,1) and $$b_i^{[1]}$$ is a real number bias term. Then, the exact value of $$a_i^{[1]}$$ and $$z_i^{[1]}$$ for the first hidden layer are computed by the following demonstration:
 
 $$
 z_1^{[1]}={w_1^{[1]}}^T x+b_1^{[1]}, ~~a_1^{[1]}=\sigma(z_1^{[1]})\\
@@ -50,6 +50,17 @@ $$
 a^{[1]}=\begin{bmatrix}a_1^{[1]}\\a_2^{[1]}\\a_3^{[1]}\end{bmatrix}=
 \begin{bmatrix}\sigma(z_1^{[1]})\\\sigma(z_2^{[1]})\\\sigma(z_3^{[1]})\end{bmatrix}
 $$
+
+While the values for the second hidden layer, $$z_i^{[1]}$$ and $$a_i^{[1]}$$ can be computed based on the formulas below:
+
+$$
+z^{[2]} = \begin{bmatrix}z_1^{[1]}\end{bmatrix} =
+\begin{bmatrix}-{w_1^{[1]}}^T-\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix} +
+ \begin{bmatrix}b_1^{[1]}\end{bmatrix}
+$$
+
+With that being said, we have the vectorized version
+
 
 ### Vectorizing across Multiple Examples
 
