@@ -39,7 +39,9 @@ $$
 Now, to vectorize those three terms, we have
 
 $$
-z^{[1]}=\begin{bmatrix}z_1^{[1]}\\z_2^{[1]}\\z_3^{[1]}\end{bmatrix}
+z^{[1]}=\begin{bmatrix}z_1^{[1]}\\z_2^{[1]}\\z_3^{[1]}\end{bmatrix}=
+\begin{bmatrix}--w_1^{[1]}--\\--w_2^{[1]}--\\--w_3^{[1]}--\end{bmatrix}
+\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
 $$
 
 
