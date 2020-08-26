@@ -79,6 +79,25 @@ where $$a^{[0]}=x$$ by denoting $$W^{[1]}=\begin{bmatrix}-{w_1^{[1]}}^T-\\-{w_2^
 
 
 ### Vectorizing across Multiple Examples
-What we discussed above is in terms of the single training sample, now let's address how we compute the output in terms of the entire samples. Suppose we have $$m$$ training examples. Denote $$x^{(i)}$$ as the $$i$$-th input example and $$z^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer before the activation function while $$a^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer after the activation function. Same interpretation for $$z^{[2](i)}$$ and $$a^{[2](i)}$$. 
+What we discussed above is only in terms of the single training sample, now let's address how to compute the output in terms of the entire samples. Suppose we have $$m$$ training examples. Denote $$x^{(i)}$$ as the $$i$$-th input example and $$z^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer before the activation function while $$a^{[1](i)}$$ represents the $$i$$-th value of the first hidden layer after the activation function. Same interpretation for $$z^{[2](i)}$$ and $$a^{[2](i)}$$.
+
+To compute the output across the entire samples, originally, we could have the following formula without vectorizing which are
+
+```python
+for i in range(m):
+    z_1_i = W_1 @ x_i + b_1
+    a_1_i = sigmoid(z_1_i)
+    z_2_i = W_2 @ a_1_i + b_2
+    a_2_i = sigmoid(z_2_i)
+```
+
+Once we vectorize the above code by denoting $$X=\begin{bmatrix}x^{(1)}&x^{(2)}&..&x^{(m)} \end{bmatrix}$$, then we have the following version with vectorization:
+
+```python
+z_1 = W_1 @ X + b_1
+a_1 = sigmoid(z_1)
+z_2 = W_2 @ a_1 + b_2
+a_2 = sigmoid(z_2)
+```
 
 ### Activation Function
