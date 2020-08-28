@@ -101,3 +101,15 @@ a_2 = sigmoid(z_2)
 ```
 
 ### Activation Function
+As mentioned before, each layer except the output layer usually has an activation function, i.e. $$a^{[1]}=\sigma(z^{[1]})$$ represents the first hidden layer uses sigmoid function as activation function. There are several common activation function that are used in deep learning, which are sigmoid, tanh, ReLU and leaky ReLU activation functions.
+
+Now let's see how those functions works and why it is necessary to have activation function in neural networks.
+
+- Sigmoid
+Sigmoid activation function takes a real value as input and outputs another value between 0 and 1, which has been introduced in the past posts. It has all the nice properties of activation function: non-linear, continuously differentiable, monotonic and has a fixed output range. The reason why we want the activation function to be non-linear is because the derivative of activation function is always constant when conducting gradient descent method, which implies that the algorithm is not learning any useful parameter at all. 
+
+- Tanh
+
+- ReLU
+
+- Leaky ReLU
