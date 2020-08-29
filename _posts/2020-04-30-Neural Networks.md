@@ -111,9 +111,17 @@ Sigmoid activation function takes a real value as input and outputs another valu
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/sigmoid.PNG" alt="">
 
-*Pros:*
+**Pros:**
+- nonlinear
+- smooth gradient
+- good for classification
+- have the activation bound in a range of (-1,1)
+**Cons:**
+- the Y values tend to respond very less to changes in X toward both ends of the activation function
+- it gives rise to a problem of "vanishing gradients"
+- the output isn't zero-centered and it makes the gradient updates go too far in different direction
+- sigmoid saturates and kills gradient.
 
-*Cons:*
 
 
 - Tanh
