@@ -107,9 +107,14 @@ Now let's see how those functions works and why it is necessary to have activati
 
 - Sigmoid
 
-Sigmoid activation function takes a real value as input and outputs another value between 0 and 1, which has been introduced in the past posts. It has all the nice properties of activation function: non-linear, continuously differentiable, monotonic and has a fixed output range. The reason why we want the activation function to be non-linear is because the derivative of activation function is always constant when conducting gradient descent method, which implies that the algorithm is not learning any useful parameter at all. The demonstration of sigmoid function and its derivative are shown below:
+Sigmoid activation function takes a real value as input and outputs another value between 0 and 1, which has been introduced in the past posts. It has all the nice properties of activation function: non-linear, continuously differentiable, monotonic and has a fixed output range. One thing needed to be noticed is the reason why we want the activation function to be non-linear. It is because if the activation function is linear, then its derivative will be always constant when conducting gradient descent method, which implies that the algorithm is not learning any useful parameter at all. The demonstration of sigmoid function and its derivative are shown below:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/sigmoid.PNG" alt="">
+
+*Pros:*
+
+*Cons:*
+
 
 - Tanh
 
