@@ -105,7 +105,7 @@ As mentioned before, each layer except the output layer usually has an activatio
 
 Now let's see how those functions works and why it is necessary to have activation function in neural networks.
 
-- Sigmoid
+*Sigmoid*
 
 Sigmoid activation function takes a real value as input and outputs another value between 0 and 1, which has been introduced in the past posts. It has all the nice properties of activation function: non-linear, continuously differentiable, monotonic and has a fixed output range. One thing needed to be noticed is the reason why we want the activation function to be non-linear. It is because if the activation function is linear, then its derivative will be always constant when conducting gradient descent method, which implies that the algorithm is not learning any useful parameter at all. The demonstration of sigmoid function and its derivative are shown below:
 
@@ -123,9 +123,14 @@ Sigmoid activation function takes a real value as input and outputs another valu
 - the output isn't zero-centered and it makes the gradient updates go too far in different direction
 - sigmoid saturates and kills gradient.
 
-- Tanh
 
-Like sigmoid activation function, tanh function is also non-linear with similar demonstration of shape except that tanh activation function is zero-centered, which makes tanh function become popular and widely used activation function. The demonstration of tanh function and its derivative are shown below:
+*Tanh*
+
+Like sigmoid activation function, tanh function is also non-linear with similar demonstration of shape except that tanh activation function is zero-centered, which makes it popular and widely used activation function. The demonstration of tanh function and its derivative are shown below:
+
+$$
+tanh(x)=\dfrac{2}{1-e^{-2x}}-1
+$$
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/tanh.PNG" alt="">
 
@@ -135,6 +140,24 @@ Like sigmoid activation function, tanh function is also non-linear with similar 
 **Cons:**
 - similar to sigmoid, tanh activation function also has the problem of vanishing gradients
 
-- ReLU
+*ReLU*
 
-- Leaky ReLU
+ReLU is another nonlinear activation function but not bounded. The range of ReLU is from 0 to infinity, which infers that it can blow up the activation. ReLU gives the benefit of sparsity and efficiency. Imagine a huge neural network and we would ideally make a few neurons in the network not activate and thereby making the activation sparse by using ReLU activation function because of its zero value of output in terms of the negative input. In that way, the networks would become much less costly and it enables us to deal with much deeper networks. The demonstration of tanh function and its derivative are shown below:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/relu.PNG" alt="">
+
+However, there is also a problem called dying ReLU problem due to that region in activation function (when input is negative) since gradient will be 0 in that region and thus the weights will not be adjusted during gradient descent. That means, those neurons that go into negative state will stop responding to variations in error/input which cause those neurons to die and not respond making a substantial part of the network passive. To solve this type of problem, people sometimes use leaky ReLu where the negative region becomes a slightly inclined line rather than horizontal line, which will be addressed below.
+
+**Pros:**
+- nonlinear
+- avoid vanishing gradient problem
+- less computationally expensive than tanh and sigmoid
+
+**Cons:**
+- the Y values tend to respond very less to changes in X toward both ends of the activation function
+- it gives rise to a problem of "vanishing gradients"
+- the output isn't zero-centered and it makes the gradient updates go too far in different direction
+- sigmoid saturates and kills gradient.
+
+
+- **Leaky ReLU**
