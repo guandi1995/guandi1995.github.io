@@ -70,7 +70,7 @@ However, there is also a problem called dying ReLU problem due to that region in
 
 ### Leaky ReLU
 
-Leaky ReLU is a variant of ReLU, instead of being 0 when input is negative, leaky ReLU allows a small, non-zero and constant gradient $$\alpha$$ ($$\alpha=0.01 usually$$). However, the consistency of the benefit across tasks is presently unclear. The demonstration of ReLU function and its derivative are shown below:
+Leaky ReLU is a variant of ReLU, instead of being 0 when input is negative, leaky ReLU allows a small, non-zero and constant gradient $$\alpha$$ ($$\alpha=0.01$$ usually). However, the consistency of the benefit across tasks is presently unclear. The demonstration of ReLU function and its derivative are shown below:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/leaky_relu.PNG" alt="">
 
