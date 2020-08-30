@@ -116,15 +116,24 @@ Sigmoid activation function takes a real value as input and outputs another valu
 - smooth gradient
 - good for classification
 - have the activation bound in a range of (-1,1)
+
 **Cons:**
 - the Y values tend to respond very less to changes in X toward both ends of the activation function
 - it gives rise to a problem of "vanishing gradients"
 - the output isn't zero-centered and it makes the gradient updates go too far in different direction
 - sigmoid saturates and kills gradient.
 
-
-
 - Tanh
+
+Like sigmoid activation function, tanh function is also non-linear with similar demonstration of shape except that tanh activation function is zero-centered, which makes tanh function become popular and widely used activation function. The demonstration of tanh function and its derivative are shown below:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/neural networks/tanh.PNG" alt="">
+
+**Pros:**
+- the gradient is stronger for tanh than sigmoid since the derivatives are deeper.
+
+**Cons:**
+- similar to sigmoid, tanh activation function also has the problem of vanishing gradients
 
 - ReLU
 
