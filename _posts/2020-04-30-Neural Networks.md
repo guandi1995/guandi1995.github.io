@@ -154,10 +154,8 @@ However, there is also a problem called dying ReLU problem due to that region in
 - less computationally expensive than tanh and sigmoid
 
 **Cons:**
-- the Y values tend to respond very less to changes in X toward both ends of the activation function
-- it gives rise to a problem of "vanishing gradients"
-- the output isn't zero-centered and it makes the gradient updates go too far in different direction
-- sigmoid saturates and kills gradient.
+- some gradients can be fragile during training and can die.
+- ReLU problem
+- it can blow up the activation due to the range of output (0, inf)
 
-
-- **Leaky ReLU**
+*Leaky ReLU*
